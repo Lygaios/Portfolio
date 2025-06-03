@@ -8,6 +8,10 @@
   src: url("/assets/fonts/Syne-VariableFont_wght.ttf") format("truetype");
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   --font-body: "Overpass", sans-serif;
   --font-heading: "Syne", sans-serif;
@@ -17,6 +21,7 @@
 }
 
 body {
+  background-color: var(--color-bg);
   font-family: var(--font-body);
   color: var(--color-text);
   margin: 0;
