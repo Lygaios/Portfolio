@@ -1,1 +1,11 @@
 <p>item2 works!</p>
+
+<div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
+  <div class="image-container">
+    <img [src]="imageUrl" [alt]="title" />
+  </div>
+  <div class="text-container">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+</div>

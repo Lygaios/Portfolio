@@ -1,4 +1,16 @@
 <p>portfolio works!</p>
 
-<app-item1></app-item1>
-<app-item2></app-item2>
+<section class="portfolio-items">
+<app-item1>
+    [title]="item1Title"
+    [description]="item1Description"
+    [imageUrl]="item1ImageUrl"
+    [isOdd]="true"
+</app-item1>
+<app-item2>
+    [title]="item2Title"
+    [description]="item2Description"
+    [imageUrl]="item2ImageUrl"
+    [isOdd]="false"
+</app-item2>
+</section>
