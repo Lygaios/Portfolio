@@ -10,11 +10,11 @@ import { Item2Component } from "./item2/item2.component";
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  item1Title = "El Pollo Loco";
-  item1Description = "A jump'n run using JavaScript with object oriented programming.";
+  item1Title = "JOIN";
+  item1Description = "A kanban board.";
   item1ImageUrl = "assets/img/project1.png";
 
-  item2Title = "JOIN";
-  item2Description = "A kanban board.";
+  item2Title = "El Pollo Loco";
+  item2Description = "A jump'n run using JavaScript with object oriented programming.";
   item2ImageUrl = "assets/img/project2.png";
 }
