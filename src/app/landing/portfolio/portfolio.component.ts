@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Item1Component } from "./item1/item1.component";
 import { Item2Component } from "./item2/item2.component";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [Item1Component, Item2Component],
+  imports: [Item1Component, Item2Component, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
   item1Title = "JOIN";

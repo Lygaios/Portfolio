@@ -5,6 +5,8 @@ import { SkillsComponent } from "./skills/skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ReferencesComponent } from "./references/references.component";
 import { ContactComponent } from "./contact/contact.component";
+import { TranslateModule } from "@ngx-translate/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-landing",
@@ -15,7 +17,9 @@ import { ContactComponent } from "./contact/contact.component";
     SkillsComponent,
     PortfolioComponent,
     ReferencesComponent,
-    ContactComponent
+    TranslateModule,
+    ContactComponent,
+    CommonModule
   ],
   templateUrl: "./landing.component.html",
   styleUrls: ["./landing.component.scss"]

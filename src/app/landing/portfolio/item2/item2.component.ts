@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-item2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './item2.component.html',
-  styleUrl: './item2.component.scss'
+  styleUrls: ['./item2.component.scss']
 })
 export class Item2Component {
   @Input() title!: string;

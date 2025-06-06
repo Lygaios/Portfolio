@@ -1,1 +1,11 @@
-<p>navbar works!</p>
+<p>JB</p> 
+
+<label for="lang">{{ "APP.SELECT_LANG" | translate }}:</label>
+<select
+  id="lang"
+  [value]="translate.currentLang"
+  (change)="switchLang($event)">
+  <option value="en">EN</option>
+  <option value="de">DE</option>
+</select>
+
