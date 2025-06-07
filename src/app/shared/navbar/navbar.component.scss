@@ -104,7 +104,7 @@
 }
 
 .overlay {
-  background-color: white;
+  background-color: var(--color-bg);
   height: 300px; // temp
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
