@@ -1,5 +1,18 @@
-.navbar-right {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background-color: var(--color-bg);
+  height: 80px;
+}
 
+
+.nav-right {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
 }
 
 .burgermenu {
@@ -9,4 +22,29 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.overlay-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 80px; // matches navbar height
+  left: 0;
+  z-index: 2;
+}
+
+.overlay {
+  background-color: white;
+  height: 300px; // temp
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -1,22 +1,29 @@
-<img src="assets/img/logo.png" alt="Logo" class="logo">
+<nav class="navbar">
+  <img src="assets/img/logo.png" alt="Logo" class="logo" />
 
-<div class="nav-right">
-<label for="lang">{{ "APP.SELECT_LANG" | translate }}:</label>
-<select
-  id="lang"
-  [value]="translate.currentLang"
-  (change)="switchLang($event)">
-  <option value="en">EN</option>
-  <option value="de">DE</option>
-</select>
-<div 
-  class="burgermenu"
-  [ngStyle]="{
-    'background-image': isMenuOpen 
-      ? 'url(/assets/img/burger-button-5.png)' 
-      : 'url(/assets/img/burger-button-1.png)'
-  }"
-  (click)="toggleMenu()"
-></div>
-
-</div>
+  <div class="nav-right">
+    <label for="lang">{{ "APP.SELECT_LANG" | translate }}:</label>
+    <select
+      id="lang"
+      [value]="translate.currentLang"
+      (change)="switchLang($event)"
+    >
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+    </select>
+    <div
+      class="burgermenu"
+      [ngStyle]="{
+        'background-image': isMenuOpen
+          ? 'url(/assets/img/burger-button-5.png)'
+          : 'url(/assets/img/burger-button-1.png)'
+      }"
+      (click)="toggleMenu()"
+    ></div>
+  </div>
+  <div *ngIf="isMenuOpen" class="overlay-wrapper">
+    <div class="overlay animate-in">
+      <h2>Overlay Menu</h2>
+    </div>
+  </div>
+</nav>
