@@ -15,7 +15,7 @@
 }
 
 .burgermenu {
-  background-image: url("/assets/img/burger-button-1.png"); 
+  background-image: url("/assets/img/burger-button-1.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 40px;
@@ -28,26 +28,73 @@
 }
 
 .animate-close {
-  animation: burgerClose 0.5s steps(4); 
+  animation: burgerClose 0.5s steps(4);
 }
 
-
 @keyframes burgerOpen {
-  0%   { background-image: url("/assets/img/burger-button-1.png"); }
-  25%  { background-image: url("/assets/img/burger-button-2.png"); }
-  50%  { background-image: url("/assets/img/burger-button-3.png"); }
-  75%  { background-image: url("/assets/img/burger-button-4.png"); }
-  100% { background-image: url("/assets/img/burger-button-5.png"); }
+  0% {
+    background-image: url("/assets/img/burger-button-1.png");
+  }
+  25% {
+    background-image: url("/assets/img/burger-button-2.png");
+  }
+  50% {
+    background-image: url("/assets/img/burger-button-3.png");
+  }
+  75% {
+    background-image: url("/assets/img/burger-button-4.png");
+  }
+  100% {
+    background-image: url("/assets/img/burger-button-5.png");
+  }
 }
 
 @keyframes burgerClose {
-  0%    { background-image: url("/assets/img/burger-button-5.png"); }
-  25%   { background-image: url("/assets/img/burger-button-6.png"); }
-  50%   { background-image: url("/assets/img/burger-button-7.png"); }
-  75%   { background-image: url("/assets/img/burger-button-8.png"); }
-  100%  { background-image: url("/assets/img/burger-button-1.png"); }
+  0% {
+    background-image: url("/assets/img/burger-button-5.png");
+  }
+  25% {
+    background-image: url("/assets/img/burger-button-6.png");
+  }
+  50% {
+    background-image: url("/assets/img/burger-button-7.png");
+  }
+  75% {
+    background-image: url("/assets/img/burger-button-8.png");
+  }
+  100% {
+    background-image: url("/assets/img/burger-button-1.png");
+  }
 }
 
+.language-toggle {
+  display: flex;
+  gap: 0.75rem;
+  font-weight: bold;
+}
+
+.lang-option {
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.lang-option.selected {
+  border: 2px solid var(--color-highlight);
+  border-radius: 4px;
+}
+
+.lang-option:not(.selected):hover::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 30%;
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
 
 .overlay-wrapper {
   position: fixed;
@@ -61,7 +108,7 @@
   background-color: white;
   height: 300px; // temp
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
   opacity: 0;
   animation: slideIn 0.5s ease-out forwards;

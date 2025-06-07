@@ -2,21 +2,29 @@
   <img src="assets/img/logo.png" alt="Logo" class="logo" />
 
   <div class="nav-right">
-    <label for="lang">{{ "APP.SELECT_LANG" | translate }}:</label>
-    <select
-      id="lang"
-      [value]="translate.currentLang"
-      (change)="switchLang($event)"
-    >
-      <option value="en">EN</option>
-      <option value="de">DE</option>
-    </select>
-<div
-  class="burgermenu"
-  [ngClass]="{ 'animate-open': isMenuOpen, 'animate-close': !isMenuOpen && wasOpen }"
-  (click)="toggleMenu()"
-></div>
+    <div class="language-toggle">
+      <span
+        class="lang-option"
+        [class.selected]="translate.currentLang === 'en'"
+        (click)="switchLangManual('en')"
+        >EN</span
+      >
+      <span
+        class="lang-option"
+        [class.selected]="translate.currentLang === 'de'"
+        (click)="switchLangManual('de')"
+        >DE</span
+      >
+    </div>
 
+    <div
+      class="burgermenu"
+      [ngClass]="{
+        'animate-open': isMenuOpen,
+        'animate-close': !isMenuOpen && wasOpen
+      }"
+      (click)="toggleMenu()"
+    ></div>
   </div>
   <div *ngIf="isMenuOpen" class="overlay-wrapper">
     <div class="overlay animate-in">

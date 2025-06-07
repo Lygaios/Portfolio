@@ -8,7 +8,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [RouterModule, CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   isMenuOpen: boolean = false;
@@ -16,16 +16,13 @@ export class NavbarComponent {
 
   constructor(public translate: TranslateService) {}
 
-  switchLang(event: Event): void {
-    const selectElement = event.target as HTMLSelectElement;
-    const selectedLang = selectElement.value;
-
-    this.translate.use(selectedLang);
-    localStorage.setItem("preferredLanguage", selectedLang);
+  switchLangManual(lang: string): void {
+    this.translate.use(lang);
+    localStorage.setItem('preferredLanguage', lang);
   }
 
   toggleMenu(): void {
-    this.wasOpen = this.isMenuOpen;     // Save current state before toggling
+    this.wasOpen = this.isMenuOpen; // Save current state before toggling
     this.isMenuOpen = !this.isMenuOpen; // Toggle open/close
   }
 }
