@@ -119,3 +119,22 @@
     opacity: 1;
   }
 }
+
+/* Hide and show based on screen size */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}

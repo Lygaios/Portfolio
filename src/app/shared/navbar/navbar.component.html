@@ -2,19 +2,21 @@
   <img src="assets/img/logo.png" alt="Logo" class="logo" />
 
   <div class="nav-right">
-    <div class="language-toggle">
+    <div class="language-toggle desktop-only">
       <span
         class="lang-option"
         [class.selected]="translate.currentLang === 'en'"
         (click)="switchLangManual('en')"
-        >EN</span
       >
+        EN
+      </span>
       <span
         class="lang-option"
         [class.selected]="translate.currentLang === 'de'"
         (click)="switchLangManual('de')"
-        >DE</span
       >
+        DE
+      </span>
     </div>
 
     <div
@@ -26,8 +28,26 @@
       (click)="toggleMenu()"
     ></div>
   </div>
+
   <div *ngIf="isMenuOpen" class="overlay-wrapper">
     <div class="overlay container animate-in">
+      <div class="language-toggle mobile-only">
+        <span
+          class="lang-option"
+          [class.selected]="translate.currentLang === 'en'"
+          (click)="switchLangManual('en')"
+        >
+          EN
+        </span>
+        <span
+          class="lang-option"
+          [class.selected]="translate.currentLang === 'de'"
+          (click)="switchLangManual('de')"
+        >
+          DE
+        </span>
+      </div>
+
       <h2>Overlay Menu</h2>
     </div>
   </div>
