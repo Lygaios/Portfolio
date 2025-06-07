@@ -22,4 +22,5 @@ export class NavbarComponent {
 }
 
 }
-// This component serves as the navigation bar for the application, allowing users to switch languages and navigate through different routes.
+// This component serves as the navigation bar for the application, 
+// allowing users to switch languages and navigate through different routes.
