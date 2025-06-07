@@ -12,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   isMenuOpen: boolean = false;
+  wasOpen: boolean = false; // Track previous state
 
   constructor(public translate: TranslateService) {}
 
@@ -24,6 +25,7 @@ export class NavbarComponent {
   }
 
   toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.wasOpen = this.isMenuOpen;     // Save current state before toggling
+    this.isMenuOpen = !this.isMenuOpen; // Toggle open/close
   }
 }

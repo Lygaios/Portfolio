@@ -8,7 +8,6 @@
   height: 80px;
 }
 
-
 .nav-right {
   display: flex;
   align-items: flex-end;
@@ -23,6 +22,32 @@
   height: 40px;
   cursor: pointer;
 }
+
+.animate-open {
+  animation: burgerOpen 0.5s steps(4) forwards;
+}
+
+.animate-close {
+  animation: burgerClose 0.5s steps(4); 
+}
+
+
+@keyframes burgerOpen {
+  0%   { background-image: url("/assets/img/burger-button-1.png"); }
+  25%  { background-image: url("/assets/img/burger-button-2.png"); }
+  50%  { background-image: url("/assets/img/burger-button-3.png"); }
+  75%  { background-image: url("/assets/img/burger-button-4.png"); }
+  100% { background-image: url("/assets/img/burger-button-5.png"); }
+}
+
+@keyframes burgerClose {
+  0%    { background-image: url("/assets/img/burger-button-5.png"); }
+  25%   { background-image: url("/assets/img/burger-button-6.png"); }
+  50%   { background-image: url("/assets/img/burger-button-7.png"); }
+  75%   { background-image: url("/assets/img/burger-button-8.png"); }
+  100%  { background-image: url("/assets/img/burger-button-1.png"); }
+}
+
 
 .overlay-wrapper {
   position: fixed;
