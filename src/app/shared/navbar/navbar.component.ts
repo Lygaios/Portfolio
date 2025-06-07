@@ -11,16 +11,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isMenuOpen: boolean = false;
+
   constructor(public translate: TranslateService) {}
 
   switchLang(event: Event): void {
-  const selectElement = event.target as HTMLSelectElement;
-  const selectedLang = selectElement.value;
+    const selectElement = event.target as HTMLSelectElement;
+    const selectedLang = selectElement.value;
 
-  this.translate.use(selectedLang);
-  localStorage.setItem("preferredLanguage", selectedLang);
-}
+    this.translate.use(selectedLang);
+    localStorage.setItem("preferredLanguage", selectedLang);
+  }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
-// This component serves as the navigation bar for the application, 
-// allowing users to switch languages and navigate through different routes.
