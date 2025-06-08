@@ -52,7 +52,14 @@
         <h1>My skills</h1>
         <h1>Portfolio</h1>
       </div>
-      <div class="overlay-footer">
+      <div
+        class="overlay-footer overlay-footer-transition"
+        *ngIf="showSlope1"
+      ></div>
+
+      <div class="overlay-footer" *ngIf="isMenuOpen && !showSlope1">
+        <!-- footer content stays here -->
+
         <div class="overlay-footer-left">
           <h1 class="overlay-footer-title">Find me here</h1>
           <span>joshuabrunke1&#64;gmail.com</span>

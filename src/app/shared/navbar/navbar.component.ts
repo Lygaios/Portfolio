@@ -10,9 +10,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
+
 export class NavbarComponent {
   isMenuOpen: boolean = false;
-  wasOpen: boolean = false; // Track previous state
+  wasOpen: boolean = false;
+  showSlope1: boolean = false;
 
   constructor(public translate: TranslateService) {}
 
@@ -22,7 +24,25 @@ export class NavbarComponent {
   }
 
   toggleMenu(): void {
-    this.wasOpen = this.isMenuOpen; // Save current state before toggling
-    this.isMenuOpen = !this.isMenuOpen; // Toggle open/close
+    this.wasOpen = this.isMenuOpen;
+
+    if (!this.isMenuOpen) {
+      // OPENING: show slope 1 for a short time, then show full overlay
+      this.showSlope1 = true;
+      this.isMenuOpen = true;
+
+      setTimeout(() => {
+        this.showSlope1 = false;
+      }, 300); // Slope-1 shows for 300ms, then slope-2 takes over
+    } else {
+      // CLOSING: show slope 1 again briefly, then close everything
+      this.showSlope1 = true;
+
+      setTimeout(() => {
+        this.isMenuOpen = false;
+        this.showSlope1 = false;
+      }, 300); // Slope-1 fades out before menu disappears
+    }
   }
 }
+
