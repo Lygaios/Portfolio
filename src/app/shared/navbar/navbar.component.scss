@@ -105,7 +105,7 @@
 
 .overlay {
   background-color: var(--color-bg);
-  height: 500px;
+  height: auto;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -121,9 +121,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2.5rem;
   text-align: center;
   padding: 1rem 2rem;
+  font-size: 32px;
 }
 
 .overlay-footer {
