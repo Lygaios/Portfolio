@@ -20,6 +20,10 @@
   --color-highlight: #4B47FF;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg);
   font-family: var(--font-body);

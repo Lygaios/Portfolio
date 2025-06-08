@@ -48,10 +48,17 @@
         </span>
       </div>
       <div class="overlay-link-box">
-        <h1>{{ "overlay.about" | translate }}</h1>
-        <h1>{{ "overlay.skills" | translate }}</h1>
-        <h1>{{ "overlay.portfolio" | translate }}</h1>
+        <a [routerLink]="['/']" fragment="about" (click)="toggleMenu()">{{
+          "overlay.about" | translate
+        }}</a>
+        <a [routerLink]="['/']" fragment="skills" (click)="toggleMenu()">{{
+          "overlay.skills" | translate
+        }}</a>
+        <a [routerLink]="['/']" fragment="portfolio" (click)="toggleMenu()">{{
+          "overlay.portfolio" | translate
+        }}</a>
       </div>
+
       <div
         class="overlay-footer overlay-footer-transition"
         *ngIf="showSlope1"
