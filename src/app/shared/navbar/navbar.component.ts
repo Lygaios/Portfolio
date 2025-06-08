@@ -44,5 +44,10 @@ export class NavbarComponent {
       }, 300); // Slope-1 fades out before menu disappears
     }
   }
+
+  scrollToTop(): void {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 }
 
