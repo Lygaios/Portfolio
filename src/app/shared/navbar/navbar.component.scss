@@ -98,14 +98,14 @@
 .overlay-wrapper {
   position: fixed;
   width: 100%;
-  top: 80px; // matches navbar height
+  top: 80px; 
   left: 0;
   z-index: 2;
 }
 
 .overlay {
   background-color: var(--color-bg);
-  height: 300px; // temp
+  height: 500px;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -130,9 +130,15 @@
   justify-content: space-between;
   align-items: flex-end;
   background-image: url(/assets/img/overlay-slope-2.png);
+  height: 318px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  background-size: contain;
+  background-position: bottom center;
+}
+
+.overlay-footer-transition {
+  background-image: url('/assets/img/overlay-slope-1.png');
+  height: 129px;
 }
 
 .overlay-footer-left {
