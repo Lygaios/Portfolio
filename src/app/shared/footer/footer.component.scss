@@ -4,3 +4,8 @@
     align-items: center;
     padding: 1rem 2rem;
 }
+
+a:hover {
+  color: var(--color-highlight);
+  cursor: pointer;
+}

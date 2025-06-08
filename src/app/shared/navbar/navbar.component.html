@@ -48,9 +48,9 @@
         </span>
       </div>
       <div class="overlay-link-box">
-        <h1>About me</h1>
-        <h1>My skills</h1>
-        <h1>Portfolio</h1>
+        <h1>{{ "overlay.about" | translate }}</h1>
+        <h1>{{ "overlay.skills" | translate }}</h1>
+        <h1>{{ "overlay.portfolio" | translate }}</h1>
       </div>
       <div
         class="overlay-footer overlay-footer-transition"
@@ -58,10 +58,8 @@
       ></div>
 
       <div class="overlay-footer" *ngIf="isMenuOpen && !showSlope1">
-        <!-- footer content stays here -->
-
         <div class="overlay-footer-left">
-          <h1 class="overlay-footer-title">Find me here</h1>
+          <h1 class="overlay-footer-title">{{ 'overlay.findme' | translate }}</h1>
           <span>joshuabrunke1&#64;gmail.com</span>
         </div>
         <div class="overlay-footer-right">

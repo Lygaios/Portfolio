@@ -1,6 +1,8 @@
 {
-  "APP": {
-    "TITLE": "Welcome to my portfolio",
-    "SELECT_LANG": "Choose your language"
+  "overlay": {
+    "about": "About me",
+    "skills": "My skills",
+    "portfolio": "Portfolio",
+    "findme": "Find me here"
   }
 }
