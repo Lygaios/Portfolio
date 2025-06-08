@@ -106,11 +106,65 @@
 .overlay {
   background-color: var(--color-bg);
   height: 300px; // temp
-  padding: 2rem;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
   opacity: 0;
   animation: slideIn 0.5s ease-out forwards;
+}
+
+.overlay-link-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.overlay-footer {
+  display: flex;
+  justify-content: space-between;
+  align--items: flex-end;
+  background-image: url(/assets/img/overlay-slope-2.png);
+}
+
+.overlay-footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  text-align: start;
+  color: var(--color-bg);
+}
+
+.overlay-footer-title {
+  font-weight: bold;
+}
+
+.overlay-footer-title:hover {
+  color: var(--color-highlight);
+}
+
+.overlay-footer-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socmed-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.socmed-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 @keyframes slideIn {
