@@ -1,8 +1,7 @@
 <nav class="navbar container">
   <a [routerLink]="['/']" (click)="scrollToTop()" class="logo-link">
-  <img src="assets/img/logo.png" alt="Logo" class="logo" />
-</a>
-
+    <img src="assets/img/logo.png" alt="Logo" class="logo" />
+  </a>
 
   <div class="nav-right">
     <div class="language-toggle desktop-only">
@@ -51,21 +50,46 @@
         </span>
       </div>
       <div class="overlay-link-box">
-        <a [routerLink]="['/']" fragment="about" class="overlay-link"(click)="toggleMenu()">{{
-          "overlay.about" | translate
-        }}
-        <span class="underline"></span>
-        <span class="click-box"></span></a>
-        <a [routerLink]="['/']" fragment="skills" class="overlay-link"(click)="toggleMenu()">{{
-          "overlay.skills" | translate
-        }}
-        <span class="underline"></span>
-        <span class="click-box"></span></a>
-        <a [routerLink]="['/']" fragment="portfolio" class="overlay-link"(click)="toggleMenu()">{{
-          "overlay.portfolio" | translate
-        }}
-        <span class="underline"></span>
-        <span class="click-box"></span></a>
+        <ng-container *ngIf="isOnHomePage(); else homepageLink">
+          <a
+            [routerLink]="['/']"
+            fragment="about"
+            class="overlay-link"
+            (click)="toggleMenu()"
+          >
+            {{ "overlay.about" | translate }}
+            <span class="underline"></span>
+            <span class="click-box"></span>
+          </a>
+          <a
+            [routerLink]="['/']"
+            fragment="skills"
+            class="overlay-link"
+            (click)="toggleMenu()"
+          >
+            {{ "overlay.skills" | translate }}
+            <span class="underline"></span>
+            <span class="click-box"></span>
+          </a>
+          <a
+            [routerLink]="['/']"
+            fragment="portfolio"
+            class="overlay-link"
+            (click)="toggleMenu()"
+          >
+            {{ "overlay.portfolio" | translate }}
+            <span class="underline"></span>
+            <span class="click-box"></span>
+          </a>
+        </ng-container>
+
+        <ng-template #homepageLink>
+          <a [routerLink]="['/']" class="overlay-link" (click)="toggleMenu()">
+            {{ "navbar.home" | translate }}
+            <span class="underline"></span>
+            <span class="click-box"></span>
+          </a>
+        </ng-template>
       </div>
 
       <div

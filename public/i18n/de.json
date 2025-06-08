@@ -4,5 +4,8 @@
     "skills": "Meine Fähigkeiten",
     "portfolio": "Portfolio",
     "findme": "Kontakt"
+  },
+  "navbar": {
+    "home": "Startseite"
   }
 }

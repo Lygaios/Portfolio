@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, TranslateModule],
+  imports: [CommonModule, RouterModule, TranslateModule], // ← Order here shouldn't matter, but this is safe
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-
 export class NavbarComponent {
-  isMenuOpen: boolean = false;
-  wasOpen: boolean = false;
-  showSlope1: boolean = false;
+  isMenuOpen = false;
+  wasOpen = false;
+  showSlope1 = false;
+
+  private router = inject(Router);
 
   constructor(public translate: TranslateService) {}
 
@@ -27,27 +28,23 @@ export class NavbarComponent {
     this.wasOpen = this.isMenuOpen;
 
     if (!this.isMenuOpen) {
-      // OPENING: show slope 1 for a short time, then show full overlay
       this.showSlope1 = true;
       this.isMenuOpen = true;
-
-      setTimeout(() => {
-        this.showSlope1 = false;
-      }, 300); // Slope-1 shows for 300ms, then slope-2 takes over
+      setTimeout(() => (this.showSlope1 = false), 300);
     } else {
-      // CLOSING: show slope 1 again briefly, then close everything
       this.showSlope1 = true;
-
       setTimeout(() => {
         this.isMenuOpen = false;
         this.showSlope1 = false;
-      }, 300); // Slope-1 fades out before menu disappears
+      }, 300);
     }
   }
 
   scrollToTop(): void {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
+  isOnHomePage(): boolean {
+    return this.router.url === '/' || this.router.url.startsWith('/#');
+  }
 }
-
