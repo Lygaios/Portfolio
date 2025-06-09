@@ -21,10 +21,11 @@
   "skills": {
     "title": "Meine Kenntnisse",
     "continuedLearning1": "Kontaktieren Sie mich,",
-    "continuedLearning2": "wenn Sie weitere Fähigkeiten benötigen. Ich bin immer bereit zu lernen."
+    "continuedLearning2": "wenn Sie weitere Fähigkeiten benötigen. Ich bin stets bereit zu lernen."
   },
   "portfolio": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "subtitle": "Eine interaktive Auswahl meiner Arbeiten"
   },
   "references": {
     "title": "Referenzen"

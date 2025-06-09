@@ -24,7 +24,8 @@
     "continuedLearning2": "if you need further skills. I'm always ready to learn."
   },
   "portfolio": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+    "subtitle": "An interactive selection of my work"
   },
   "references": {
     "title": "References"

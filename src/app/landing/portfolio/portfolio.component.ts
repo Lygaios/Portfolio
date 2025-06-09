@@ -17,5 +17,5 @@ export class PortfolioComponent {
 
   item2Title = "El Pollo Loco";
   item2Description = "A jump'n run using JavaScript with object oriented programming.";
-  item2ImageUrl = "/assets/img/portfolio-join-colour.png";
+  item2ImageUrl = "/assets/img/el-pollo-loco.png";
 }
