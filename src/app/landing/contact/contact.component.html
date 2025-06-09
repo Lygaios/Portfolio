@@ -1,4 +1,37 @@
-<section id="contact">
-  <h2 class="contact-title section-title">{{ "contact.title" | translate }}</h2>
+<section id="contact" class="contact-container container">
+  <div class="contact-title-box">
+    <h2 class="contact-title section-title">
+      {{ "contact.title" | translate }}
+    </h2>
+  </div>
+  <div class="form-header-box">
+    <p class="form-header-1">{{ "contact.formHeader1" | translate }}</p>
+    <p class="form-header-2">{{ "contact.formHeader2" | translate }}</p>
+  </div>
 
+  <div class="contact-form">
+    <label for="name">{{ "contact.name" | translate }}</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="{{ 'contact.namePlaceholder' | translate }}"
+    />
+
+    <label for="email">{{ "contact.email" | translate }}</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="{{ 'contact.emailPlaceholder' | translate }}"
+    />
+
+    <label for="message">{{ "contact.message" | translate }}</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+    ></textarea>
+    <input type="submit" value="Submit" />
+  </div>
 </section>
