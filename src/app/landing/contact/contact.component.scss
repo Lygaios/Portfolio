@@ -1,4 +1,15 @@
+.contact-full {
+    display: flex;
+    flex-direction: column;
+  background-image: url(/assets/img/contact-slope.png);
+  height: 1061px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+}
+
 .contact-container {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
@@ -14,6 +25,7 @@
 
 .contact-title {
     text-align: left;
+    color: var(--color-bg);
 }
 
 .form-header-box {
@@ -32,7 +44,7 @@
 
 .form-header-2 {
     font-size: 1rem;
-    color: var(--color-text);
+    color: var(--color-bg);
 }
 
 .contact-form {
@@ -42,6 +54,7 @@
     justify-content: center;
     text-align: center;
     gap: 0.5rem;
+    color: var(--color-bg);
 }
 
 input[type=text], [type=email], select, textarea{
