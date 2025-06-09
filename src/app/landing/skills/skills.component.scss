@@ -4,7 +4,6 @@
     max-width: 1440px;
     width: 100%;
     height: auto;
-    min-height: 800px;
     margin: 0 auto;
 }
 
@@ -64,4 +63,24 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     text-align: left;
+}
+
+.skills-bottom-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.skills-bottom-arrow-container:hover {
+    cursor: pointer;
+}
+
+.skills-bottom-arrow {
+    width: 11rem;
+    height: 11rem;
+    background-image: url("/assets/img/arrow-southeast-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }

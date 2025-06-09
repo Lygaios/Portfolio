@@ -1,0 +1,19 @@
+.references-bottom-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.references-bottom-arrow-container:hover {
+    cursor: pointer;
+}
+
+.references-bottom-arrow {
+    width: 11rem;
+    height: 11rem;
+    background-image: url("/assets/img/arrow-southwest-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
