@@ -43,6 +43,16 @@ h6 {
   padding: 0;
 }
 
+.section-title {
+  font-size: 3.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.section-title:hover {
+  color: var(--color-highlight);
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -62,3 +72,4 @@ a:hover {
   width: 100%;
   margin: 0 auto;
 }
+

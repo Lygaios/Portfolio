@@ -42,3 +42,15 @@
     text-align: right;
     font-weight: bold;
 }
+
+.scroll-down-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-down-text {
+    text-align: center;
+    flex-wrap: wrap;
+}
