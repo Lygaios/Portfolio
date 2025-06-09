@@ -12,7 +12,11 @@
     "scrollDown": "Abwärts scrollen"
   },
   "about": {
-    "title": "Über mich"
+    "title": "Über mich",
+    "description": "Ich bin ein leidenschaftlicher Webentwickler mit Erfahrung in Angular und anderen modernen Technologien.",
+    "location": "Standort: Langelsheim, Niedersachsen",
+    "remote": "Auf der Suche nach Remote-Arbeit",
+    "talk": "Lassen Sie uns reden!"
   },
   "skills": {
     "title": "Meine Fähigkeiten",

@@ -12,7 +12,11 @@
     "scrollDown": "Scroll down"
   },
   "about": {
-    "title": "About me"
+    "title": "About me",
+    "description": "I am a passionate web developer with experience in Angular and other modern technologies.",
+    "location": "Location: Langelsheim, Lower Saxony, Germany",
+    "remote": "Looking for remote work",
+    "talk": "Let's talk!"
   },
   "skills": {
     "title": "My skills",
