@@ -1,8 +1,8 @@
 .contact-full {
     display: flex;
     flex-direction: column;
-  background-image: url(/assets/img/contact-slope.png);
-  height: 1061px;
+  background-image: url(/assets/img/contact-slope-h700.png);
+  height: 700px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
@@ -58,10 +58,25 @@
 }
 
 input[type=text], [type=email], select, textarea{
-  width: 100%;
+  width: 60%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+    background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+#message {
+  height: 200px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: 12px 20px;
+  border: solid 1px var(--color-bg);
+  cursor: pointer;
+  float: right;
 }
