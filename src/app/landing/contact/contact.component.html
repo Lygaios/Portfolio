@@ -13,14 +13,14 @@
   <div class="contact-form-box">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
     <label for="name">{{ "contact.name" | translate }}</label>
-    <input [(ngModel)]="contactData.name"
+    <input #name="ngModel" minlength="2" maxlength="40" [(ngModel)]="contactData.name"
       type="text"
       id="name"
       name="name"
       placeholder="{{ 'contact.namePlaceholder' | translate }}" required    />
 
     <label for="email">{{ "contact.email" | translate }}</label>
-    <input [(ngModel)]="contactData.email"
+    <input #email="ngModel" [(ngModel)]="contactData.email"
       type="email"
       id="email"
       name="email"
@@ -28,12 +28,21 @@
     />
 
     <label for="message">{{ "contact.message" | translate }}</label>
-    <textarea
+    <textarea #message="ngModel" minlength="10" maxlength="500"
       id="message"
       name="message"
       [(ngModel)]="contactData.message"
       placeholder="{{ 'contact.messagePlaceholder' | translate }}" required
     ></textarea>
+    <ng-container *ngIf="!name.valid && name.touched && !name.disabled">
+      <p class="error-message">{{ 'contact.nameError' | translate }}</p>
+    </ng-container>
+    <ng-container *ngIf="!email.valid && email.touched && !email.disabled">
+      <p class="error-message">{{ 'contact.emailError' | translate }}</p>
+    </ng-container>
+    <ng-container *ngIf="!message.valid && message.touched && !message.disabled">
+      <p class="error-message">{{ 'contact.messageError' | translate }}</p>
+    </ng-container>
     <input type="submit" value="{{ 'contact.submit' | translate }}" />
     </form>
   </div>

@@ -1,8 +1,8 @@
 .contact-full {
   display: flex;
   flex-direction: column;
-  background-image: url(/assets/img/contact-slope-h700.png);
-  height: 700px;
+  background-image: url(/assets/img/contact-slope-h900.png);
+  height: 900px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
@@ -72,6 +72,11 @@ textarea {
 
 #message {
   height: 200px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 0.5rem;
 }
 
 /* Style the submit button */
