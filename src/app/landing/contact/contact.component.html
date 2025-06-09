@@ -43,6 +43,9 @@
     <ng-container *ngIf="!message.valid && message.touched && !message.disabled">
       <p class="error-message">{{ 'contact.messageError' | translate }}</p>
     </ng-container>
+    <ng-container *ngIf="contactForm.submitted && contactForm.valid && this.mailTest">
+      <p class="success-message">{{ 'contact.successMessage' | translate }}</p>
+    </ng-container>
     <input type="submit" value="{{ 'contact.submit' | translate }}" />
     </form>
   </div>
