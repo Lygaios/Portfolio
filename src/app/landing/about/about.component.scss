@@ -16,8 +16,47 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-content-left-top {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.about-data-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.about-data-item {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.about-talk-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-talk-button-container:hover {
+    font-weight: bold;
+}
+
+.about-talk-text {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .about-content-right {
@@ -31,4 +70,24 @@
 .about-photo {
     width: 400px;
     height: auto;
+}
+
+.about-bottom-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-bottom-arrow-container:hover {
+    cursor: pointer;
+}
+
+.about-bottom-arrow {
+    width: 11rem;
+    height: 11rem;
+    background-image: url("/assets/img/arrow-southwest-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
