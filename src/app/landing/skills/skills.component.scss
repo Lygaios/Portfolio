@@ -18,10 +18,10 @@
 .skills-inner-box-top {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 2.5rem;
 }
 
 .skill-icon-box {
