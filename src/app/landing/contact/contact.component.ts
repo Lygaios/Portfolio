@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -16,8 +16,10 @@ export class ContactComponent {
     email: "",
     message: "",
   }
-  
-  onSubmit() {
-    console.log(this.contactData);
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid) {
+      console.log(this.contactData);
+    }
   }
 }

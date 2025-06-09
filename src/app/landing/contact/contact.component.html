@@ -11,21 +11,20 @@
   </div>
 
   <div class="contact-form-box">
-    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
     <label for="name">{{ "contact.name" | translate }}</label>
     <input [(ngModel)]="contactData.name"
       type="text"
       id="name"
       name="name"
-      placeholder="{{ 'contact.namePlaceholder' | translate }}"
-    />
+      placeholder="{{ 'contact.namePlaceholder' | translate }}" required    />
 
     <label for="email">{{ "contact.email" | translate }}</label>
     <input [(ngModel)]="contactData.email"
       type="email"
       id="email"
       name="email"
-      placeholder="{{ 'contact.emailPlaceholder' | translate }}"
+      placeholder="{{ 'contact.emailPlaceholder' | translate }}" required
     />
 
     <label for="message">{{ "contact.message" | translate }}</label>
@@ -33,7 +32,7 @@
       id="message"
       name="message"
       [(ngModel)]="contactData.message"
-      placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+      placeholder="{{ 'contact.messagePlaceholder' | translate }}" required
     ></textarea>
     <input type="submit" value="{{ 'contact.submit' | translate }}" />
     </form>
