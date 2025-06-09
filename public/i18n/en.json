@@ -7,5 +7,8 @@
   },
   "navbar": {
     "home": "Home"
+  },
+  "hero": {
+    "scrollDown": "Scroll down"
   }
 }
