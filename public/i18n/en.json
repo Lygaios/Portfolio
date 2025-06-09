@@ -10,5 +10,20 @@
   },
   "hero": {
     "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About me"
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "portfolio": {
+    "title": "Portfolio"
+  },
+  "references": {
+    "title": "References"
+  },
+  "contact": {
+    "title": "Contact"
   }
 }
