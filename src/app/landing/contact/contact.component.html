@@ -10,9 +10,10 @@
     <p class="form-header-2">{{ "contact.formHeader2" | translate }}</p>
   </div>
 
-  <div class="contact-form">
+  <div class="contact-form-box">
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
     <label for="name">{{ "contact.name" | translate }}</label>
-    <input
+    <input [(ngModel)]="contactData.name"
       type="text"
       id="name"
       name="name"
@@ -20,7 +21,7 @@
     />
 
     <label for="email">{{ "contact.email" | translate }}</label>
-    <input
+    <input [(ngModel)]="contactData.email"
       type="email"
       id="email"
       name="email"
@@ -31,9 +32,11 @@
     <textarea
       id="message"
       name="message"
+      [(ngModel)]="contactData.message"
       placeholder="{{ 'contact.messagePlaceholder' | translate }}"
     ></textarea>
     <input type="submit" value="{{ 'contact.submit' | translate }}" />
+    </form>
   </div>
   </div>
 </section>
