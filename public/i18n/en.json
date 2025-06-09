@@ -15,7 +15,8 @@
     "title": "About me"
   },
   "skills": {
-    "title": "My skills"
+    "title": "My skills",
+    "continuedLearning": "Continued learning"
   },
   "portfolio": {
     "title": "Portfolio"

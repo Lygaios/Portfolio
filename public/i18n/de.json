@@ -15,7 +15,8 @@
     "title": "Über mich"
   },
   "skills": {
-    "title": "Meine Fähigkeiten"
+    "title": "Meine Fähigkeiten",
+    "continuedLearning": "Fortlaufendes Lernen"
   },
   "portfolio": {
     "title": "Portfolio"
