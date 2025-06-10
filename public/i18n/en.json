@@ -9,7 +9,8 @@
     "home": "Home"
   },
   "hero": {
-    "scrollDown": "Scroll down"
+    "scrollDown1": "Scroll ",
+    "scrollDown2": "down"
   },
   "about": {
     "title": "About me",

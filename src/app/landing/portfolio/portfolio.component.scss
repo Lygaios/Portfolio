@@ -5,6 +5,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .portfolio-title-box {
@@ -20,3 +21,10 @@
   font-size: 1.5rem;
   text-align: center;
 }
+
+
+  @media (max-width: 1000px) {
+   h2 {
+     font-size: 3rem;
+    }
+  }

@@ -1,11 +1,13 @@
 .contact-full {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   background-image: url(/assets/img/contact-slope-h900.png);
   height: 900px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
+  box-sizing: border-box;
 }
 
 .contact-container {
@@ -16,6 +18,8 @@
   height: auto;
   margin: 0 auto;
   gap: 0.5rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
 }
 
 .contact-title-box {

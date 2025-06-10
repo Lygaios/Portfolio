@@ -9,7 +9,8 @@
     "home": "Startseite"
   },
   "hero": {
-    "scrollDown": "Abwärts scrollen"
+    "scrollDown1": "Abwärts",
+    "scrollDown2": "scrollen"
   },
   "about": {
     "title": "Über mich",

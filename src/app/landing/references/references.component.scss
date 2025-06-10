@@ -5,6 +5,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .references-title-box {
@@ -88,3 +89,9 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+  @media (max-width: 1000px) {
+   h2 {
+     font-size: 3rem;
+    }
+  }
