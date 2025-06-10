@@ -44,7 +44,7 @@ h3 {
   font-size: 2.5rem;
   position: absolute;
   z-index: 2;
-  top: -1.8rem;
+  top: -1.9rem;
 
   // desktop default
   &.odd {
@@ -56,17 +56,17 @@ h3 {
   }
 
   // mobile layout
-@media (max-width: 768px) {
-  top: 0.5rem;
-  
-  &.odd {
-    left: auto;
-    right: -1rem;
-  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
 
-  &.even {
-    right: auto;
-    left: -1rem;
+    &.odd {
+      left: auto;
+      right: -1rem;
+    }
+
+    &.even {
+      right: auto;
+      left: -1rem;
+    }
   }
-}
 }
