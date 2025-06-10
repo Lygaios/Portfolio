@@ -25,7 +25,15 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Eine interaktive Auswahl meiner Arbeiten"
+    "subtitle": "Eine interaktive Auswahl meiner Arbeiten",
+    "projects": {
+      "join": {
+        "description": "Eine App zum Organisieren von Aufgaben, inspiriert von Kanban-Boards."
+      },
+      "pollo": {
+        "description": "Ein einfaches Jump'n Run mit JavaScript und objektorientierter Programmierung. Helfen Sie Pepe, Hühner mit Salsa-Flaschen zu besiegen."
+      }
+    }
   },
   "references": {
     "title": "Referenzen"

@@ -12,10 +12,8 @@ import { TranslateModule } from "@ngx-translate/core";
 })
 export class PortfolioComponent {
   item1Title = "JOIN";
-  item1Description = "A kanban board.";
   item1ImageUrl = "/assets/img/portfolio-join-colour.png";
 
   item2Title = "El Pollo Loco";
-  item2Description = "A jump'n run using JavaScript with object oriented programming.";
   item2ImageUrl = "/assets/img/el-pollo-loco.png";
 }

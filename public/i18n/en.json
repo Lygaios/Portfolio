@@ -25,7 +25,15 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "An interactive selection of my work"
+    "subtitle": "An interactive selection of my work",
+    "projects": {
+      "join": {
+        "description": "An app for organising tasks, inspired by Kanban boards."
+      },
+      "pollo": {
+        "description": "A simple jump'n run using JavaScript with object-oriented programming. Help Pepe defeat chickens with salsa bottles"
+      }
+    }
   },
   "references": {
     "title": "References"
