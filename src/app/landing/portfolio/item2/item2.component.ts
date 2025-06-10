@@ -14,4 +14,13 @@ export class Item2Component {
   @Input() description!: string;
   @Input() imageUrl!: string;
   @Input() isOdd: boolean = false;
+
+ isHovered = false;
+
+  toggleHover(): void {
+    // Mobile only: sticky effect
+    if (window.innerWidth <= 768) {
+      this.isHovered = true;
+    }
+  }
 }

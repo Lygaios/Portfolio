@@ -1,10 +1,14 @@
 <div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
   <div class="number-label" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">01/02</div>
-  <div class="image-container">
-    <a href="#" target="_blank" rel="noopener">
+<div class="image-container">
+  <a href="#" target="_blank" rel="noopener">
+    <div class="image-wrapper" [ngClass]="{ 'hovered': isHovered }" (click)="toggleHover()">
       <img [src]="imageUrl" [alt]="title" />
-    </a>
-  </div>
+      <div class="image-frame odd"></div>
+    </div>
+  </a>
+</div>
+
   <div class="text-container">
     <h3>{{ title }}</h3>
     <p class="tech-stack">Angular | TypeScript | HTML | CSS | Firebase</p>
