@@ -1,5 +1,5 @@
 <div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
-  <div class="number-label">01/02</div>
+  <div class="number-label" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">01/02</div>
   <div class="image-container">
     <a href="#" target="_blank" rel="noopener">
       <img [src]="imageUrl" [alt]="title" />
