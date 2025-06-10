@@ -73,8 +73,8 @@ h3 {
 
 .image-wrapper {
   position: relative;
-  display: inline-block; // ← YES, this time we use it again — it worked before
-  line-height: 0; // just in case inline whitespace causes overflow
+  display: inline-block; 
+  line-height: 0; 
 
   img {
     display: block;
@@ -114,6 +114,54 @@ h3 {
     opacity: 1;
   }
 }
+
+.arrow-circle {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  transition: transform 100ms ease;
+
+  right: -1.1rem;
+
+  .image-frame.even & {
+    right: auto;
+    left: -1.1rem;
+  }
+
+  .image-wrapper.hovered &,
+  .image-wrapper:hover & {
+    transform: translateY(-50%) scale(1.5);
+  }
+}
+
+
+.arrow-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/assets/img/arrow-cream-northeast.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  // Start pointing "down"
+  transform: rotate(135deg);
+  transition: transform 100ms ease;
+}
+
+// Animate to ↗ on hover or mobile-tap (.hovered)
+.image-wrapper.hovered .arrow-icon,
+.image-wrapper:hover .arrow-icon {
+  transform: rotate(0deg) scale(1.5);
+}
+
 @media (max-width: 1000px) {
   .portfolio-item {
     flex-direction: column !important;
