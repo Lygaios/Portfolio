@@ -1,18 +1,34 @@
-<div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
-  <div class="number-label" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">02/02</div>
-<div class="image-container">
-  <a href="#" target="_blank" rel="noopener">
-    <div class="image-wrapper" [ngClass]="{ 'hovered': isHovered }" (click)="toggleHover()">
-      <img [src]="imageUrl" [alt]="title" />
-      <div class="image-frame even"></div>
-    </div>
-  </a>
-</div>
+<div class="portfolio-item" [ngClass]="{ odd: isOdd, even: !isOdd }">
+  <div class="number-label" [ngClass]="{ odd: isOdd, even: !isOdd }">02/02</div>
+  <div class="image-container">
+    <a href="#" target="_blank" rel="noopener">
+      <div
+        class="image-wrapper"
+        [ngClass]="{ hovered: isHovered }"
+        (click)="toggleHover()"
+      >
+        <img [src]="imageUrl" [alt]="title" />
+        <div class="image-frame even">
+          <div class="arrow-circle">
+            <span class="arrow-icon"></span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 
   <div class="text-container">
     <h3>{{ title }}</h3>
     <p class="tech-stack">JavaScript | HTML | CSS</p>
-    <p class="item-description">{{ "portfolio.projects.pollo.description" | translate }}</p>
-    <a href="https://github.com/JoshuaBrunke/El-Pollo-Loco" target="_blank" rel="noopener" class="portfolio-button">Github</a>
+    <p class="item-description">
+      {{ "portfolio.projects.pollo.description" | translate }}
+    </p>
+    <a
+      href="https://github.com/JoshuaBrunke/El-Pollo-Loco"
+      target="_blank"
+      rel="noopener"
+      class="portfolio-button"
+      >Github</a
+    >
   </div>
 </div>
