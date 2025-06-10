@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 
   &.odd {
     flex-direction: row;
@@ -22,4 +22,18 @@
     max-width: 500px;
     height: auto;
   }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.tech-stack {
+  font-size: 1.2rem;
+  color: var(--color-highlight);
+  padding: 0.5rem 0;
+}
+
+.item-description {
+  padding-bottom: 2rem;
 }

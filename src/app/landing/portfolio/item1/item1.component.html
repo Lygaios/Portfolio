@@ -1,10 +1,13 @@
 <div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
   <div class="image-container">
-    <img [src]="imageUrl" [alt]="title" />
+    <a href="#" target="_blank" rel="noopener">
+      <img [src]="imageUrl" [alt]="title" />
+    </a>
   </div>
   <div class="text-container">
     <h3>{{ title }}</h3>
-    <p>{{ "portfolio.projects.join.description" | translate }}</p>
-
+    <p class="tech-stack">Angular | TypeScript | HTML | CSS | Firebase</p>
+    <p class="item-description">{{ "portfolio.projects.join.description" | translate }}</p>
+    <a href="https://github.com/JoshuaBrunke" target="_blank" rel="noopener" class="portfolio-button">Github</a>
   </div>
 </div>

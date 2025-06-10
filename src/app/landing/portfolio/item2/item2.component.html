@@ -1,10 +1,13 @@
 <div class="portfolio-item" [ngClass]="{ 'odd': isOdd, 'even': !isOdd }">
   <div class="image-container">
-    <img [src]="imageUrl" [alt]="title" />
+    <a href="#" target="_blank" rel="noopener">
+      <img [src]="imageUrl" [alt]="title" />
+    </a>
   </div>
   <div class="text-container">
     <h3>{{ title }}</h3>
-    <p>{{ "portfolio.projects.pollo.description" | translate }}</p>
-
+    <p class="tech-stack">JavaScript | HTML | CSS</p>
+    <p class="item-description">{{ "portfolio.projects.pollo.description" | translate }}</p>
+    <a href="https://github.com/JoshuaBrunke/El-Pollo-Loco" target="_blank" rel="noopener" class="portfolio-button">Github</a>
   </div>
 </div>
