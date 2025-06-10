@@ -259,4 +259,15 @@ h3 {
     width: 1rem;
     height: 1rem;
   }
+   .number-label {
+    top: -1.5rem;
+
+    &.odd {
+      right: 0.8rem;
+    }
+
+    &.even {
+      left: 0.8rem;
+    }
+  }
 }
