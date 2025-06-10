@@ -11,10 +11,15 @@
   box-sizing: border-box;
 }
 
+.logo-link {
+  padding-left: 1rem;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-right: 1rem;
 }
 
 .burgermenu {
