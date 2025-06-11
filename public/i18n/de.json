@@ -38,7 +38,14 @@
     }
   },
   "references": {
-    "title": "Referenzen"
+    "title": "Referenzen",
+    "subtitle": "Das sagen meine Kollegen über mich",
+    "jobTitle1": "Teamkollege",
+    "text1": "Joshua wollte immer verstehen, wie alles zusammenhängt, statt einfach nur Schritt für Schritt vorzugehen. Er hat Struktur in unser Frontend gebracht und hatte ein gutes Gespür dafür, worauf es in einem Projekt wirklich ankommt.",
+    "jobTitle2": "Teamkollege",
+    "text2": "Joshua hat ein gutes Gespür für den richtigen Kurs – er sieht, wohin sich etwas entwickelt, und hilft dem Team, dorthin zu kommen. Er ist konzentriert, stellt kluge Fragen und setzt auf durchdachte Lösungen statt auf schnelle Notlösungen.",
+    "jobTitle3": "Teamkollege",
+    "text3": "Joshua war immer freundlich und angenehm im Umgang. Er kann Dinge wirklich gut erklären – selbst für jemanden wie mich ohne technischen Hintergrund. Er hat dafür gesorgt, dass wir uns als echtes Team gefühlt haben."
   },
   "contact": {
     "title": "Kontakt"

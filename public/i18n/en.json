@@ -38,7 +38,14 @@
     }
   },
   "references": {
-    "title": "References"
+    "title": "References",
+    "subtitle": "Here is what my colleagues say about me",
+    "jobTitle1": "Team partner",
+    "text1": "Joshua always wanted to understand how everything fits together, not just follow tutorials step by step. He brought clarity to our frontend code and had a great instinct for what really matters in a project.",
+    "jobTitle2": "Team partner",
+    "text2": "Joshua has a strong sense of direction — he sees where things are going and helps guide the team toward it. He’s always focused, asks smart questions, and pushes for meaningful solutions rather than quick fixes.",
+    "jobTitle3": "Team partner",
+    "text3": "Joshua was always kind and easy to work with. He has a real talent for explaining things clearly, even to someone like me who’s not from a tech background. He made our group feel like a team."  
   },
   "contact": {
     "title": "Contact"
