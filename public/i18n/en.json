@@ -48,8 +48,19 @@
     "text3": "Joshua was always kind and easy to work with. He has a real talent for explaining things clearly, even to someone like me who’s not from a tech background. He made our group feel like a team."  
   },
   "contact": {
-    "title": "Contact"
-  }, 
+    "title": "Contact",
+    "formHeader1": "Let's talk!",
+    "formHeader2": "I look forward to hearing from you.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "privacyPolicy1": "I have read the",
+    "privacyPolicy2": "privacy policy",
+    "privacyPolicy3": "and agree to the processing of my data as outlined."
+  },
   "imprint": {
   "title": "Imprint",
   "text": "<p><strong>Information according to § 5 of the German Telemedia Act (TMG):</strong></p><p>Joshua Brunke<br>Über der Kieckwiese 3<br>38729 Langelsheim<br>Germany</p><p>Phone: +49 (5383) 9079151<br>Email: <a href=\"mailto:joshuabrunke1@gmail.com\">joshuabrunke1@gmail.com</a></p><p><strong>Responsible for content according to § 55 para. 2 RStV:</strong><br>Joshua Brunke<br>(same address as above)</p>"

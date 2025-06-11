@@ -79,6 +79,23 @@ textarea {
   height: 200px;
 }
 
+.privacy-policy-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.privacy-link {
+  color: var(--color-highlight);
+  &:hover {
+    font-weight: bold;
+  }
+}
+
 .error-message {
   color: red;
   margin-top: 0.5rem;

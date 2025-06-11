@@ -1,54 +1,108 @@
 <section id="contact" class="contact-full">
-   <div class="anchor-spacer" aria-hidden="true"></div>
+  <div class="anchor-spacer" aria-hidden="true"></div>
   <div class="contact-container container">
-  <div class="contact-title-box">
-    <h2 class="contact-title section-title">
-      {{ "contact.title" | translate }}
-    </h2>
-  </div>
-  <div class="form-header-box">
-    <p class="form-header-1">{{ "contact.formHeader1" | translate }}</p>
-    <p class="form-header-2">{{ "contact.formHeader2" | translate }}</p>
-  </div>
+    <div class="contact-title-box">
+      <h2 class="contact-title section-title">
+        {{ "contact.title" | translate }}
+      </h2>
+    </div>
+    <div class="form-header-box">
+      <p class="form-header-1">{{ "contact.formHeader1" | translate }}</p>
+      <p class="form-header-2">{{ "contact.formHeader2" | translate }}</p>
+    </div>
 
-  <div class="contact-form-box">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
-    <label for="name">{{ "contact.name" | translate }}</label>
-    <input #name="ngModel" minlength="2" maxlength="40" [(ngModel)]="contactData.name"
-      type="text"
-      id="name"
-      name="name"
-      placeholder="{{ 'contact.namePlaceholder' | translate }}" required    />
+    <div class="contact-form-box">
+      <form
+        (ngSubmit)="onSubmit(contactForm)"
+        #contactForm="ngForm"
+        class="contact-form"
+      >
+        <label for="name">{{ "contact.name" | translate }}</label>
+        <input
+          #name="ngModel"
+          minlength="2"
+          maxlength="40"
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="{{ 'contact.namePlaceholder' | translate }}"
+          required
+        />
 
-    <label for="email">{{ "contact.email" | translate }}</label>
-    <input #email="ngModel" [(ngModel)]="contactData.email"
-      type="email"
-      id="email"
-      name="email"
-      placeholder="{{ 'contact.emailPlaceholder' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-    />
+        <label for="email">{{ "contact.email" | translate }}</label>
+        <input
+          #email="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="{{ 'contact.emailPlaceholder' | translate }}"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        />
 
-    <label for="message">{{ "contact.message" | translate }}</label>
-    <textarea #message="ngModel" minlength="10" maxlength="500"
-      id="message"
-      name="message"
-      [(ngModel)]="contactData.message"
-      placeholder="{{ 'contact.messagePlaceholder' | translate }}" required
-    ></textarea>
-    <ng-container *ngIf="!name.valid && name.touched && !name.disabled">
-      <p class="error-message">{{ 'contact.nameError' | translate }}</p>
-    </ng-container>
-    <ng-container *ngIf="!email.valid && email.touched && !email.disabled">
-      <p class="error-message">{{ 'contact.emailError' | translate }}</p>
-    </ng-container>
-    <ng-container *ngIf="!message.valid && message.touched && !message.disabled">
-      <p class="error-message">{{ 'contact.messageError' | translate }}</p>
-    </ng-container>
-    <ng-container *ngIf="contactForm.submitted && contactForm.valid && this.mailTest">
-      <p class="success-message">{{ 'contact.successMessage' | translate }}</p>
-    </ng-container>
-    <input type="submit" value="{{ 'contact.submit' | translate }}" />
-    </form>
-  </div>
+        <label for="message">{{ "contact.message" | translate }}</label>
+        <textarea
+          #message="ngModel"
+          minlength="10"
+          maxlength="500"
+          id="message"
+          name="message"
+          [(ngModel)]="contactData.message"
+          placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+          required
+        ></textarea>
+        <div class="privacy-policy-box">
+  <input
+    type="checkbox"
+    id="privacyPolicy"
+    name="privacyPolicy"
+    [(ngModel)]="contactData.privacyPolicy"
+    required
+  />
+  <label for="privacyPolicy">
+    {{ "contact.privacyPolicy1" | translate }}
+  </label>
+  <a
+    routerLink="/privacy"
+    target="_blank"
+    rel="noopener"
+    class="privacy-link"
+  >
+    {{ "contact.privacyPolicy2" | translate }}
+  </a>
+  <span>
+    {{ "contact.privacyPolicy3" | translate }}
+  </span>
+</div>
+
+        <ng-container *ngIf="!name.valid && name.touched && !name.disabled">
+          <p class="error-message">{{ "contact.nameError" | translate }}</p>
+        </ng-container>
+        <ng-container *ngIf="!email.valid && email.touched && !email.disabled">
+          <p class="error-message">{{ "contact.emailError" | translate }}</p>
+        </ng-container>
+        <ng-container
+          *ngIf="!message.valid && message.touched && !message.disabled"
+        >
+          <p class="error-message">{{ "contact.messageError" | translate }}</p>
+        </ng-container>
+        <ng-container
+          *ngIf="contactForm.submitted && !contactData.privacyPolicy"
+        >
+          <p class="error-message">{{ "contact.privacyError" | translate }}</p>
+        </ng-container>
+
+        <ng-container
+          *ngIf="contactForm.submitted && contactForm.valid && this.mailTest"
+        >
+          <p class="success-message">
+            {{ "contact.successMessage" | translate }}
+          </p>
+        </ng-container>
+        <input type="submit" value="{{ 'contact.submit' | translate }}" />
+      </form>
+    </div>
   </div>
 </section>

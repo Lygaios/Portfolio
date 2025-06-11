@@ -48,11 +48,22 @@
     "text3": "Joshua war immer freundlich und angenehm im Umgang. Er kann Dinge wirklich gut erklären – selbst für jemanden wie mich ohne technischen Hintergrund. Er hat dafür gesorgt, dass wir uns als echtes Team gefühlt haben."
   },
   "contact": {
-    "title": "Kontakt"
-  }, 
-"imprint": {
-  "title": "Impressum",
-  "text": "<p><strong>Angaben gemäß § 5 TMG:</strong></p><p>Joshua Brunke<br>Über der Kieckwiese 3<br>38729 Langelsheim<br>Deutschland</p><p>Telefon: +49 (5383) 9079151<br>E-Mail: <a href=\"mailto:joshuabrunke1@gmail.com\">joshuabrunke1@gmail.com</a></p><p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>Joshua Brunke<br>(Anschrift wie oben)</p>"
+    "title": "Kontakt",
+    "formHeader1": "Unterhalten wir uns!",
+    "formHeader2": "Ich freue mich darauf, von Ihnen zu hören.",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "Ihre E-Mail",
+    "message": "Nachricht",
+    "messagePlaceholder": "Ihre Nachricht",
+    "privacyPolicy1": "Ich habe die",
+    "privacyPolicy2": "Datenschutzerklärung",
+    "privacyPolicy3": "gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu."
+  },
+  "imprint": {
+    "title": "Impressum",
+    "text": "<p><strong>Angaben gemäß § 5 TMG:</strong></p><p>Joshua Brunke<br>Über der Kieckwiese 3<br>38729 Langelsheim<br>Deutschland</p><p>Telefon: +49 (5383) 9079151<br>E-Mail: <a href=\"mailto:joshuabrunke1@gmail.com\">joshuabrunke1@gmail.com</a></p><p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>Joshua Brunke<br>(Anschrift wie oben)</p>"
 }
 
 }
