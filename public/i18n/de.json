@@ -70,10 +70,9 @@
   "imprint": {
     "title": "Impressum",
     "text": "<p><strong>Angaben gemäß § 5 TMG:</strong></p><p>Joshua Brunke<br>Über der Kieckwiese 3<br>38729 Langelsheim<br>Deutschland</p><p>Telefon: +49 (5383) 9079151<br>E-Mail: <a href=\"mailto:joshuabrunke1@gmail.com\">joshuabrunke1@gmail.com</a></p><p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>Joshua Brunke<br>(Anschrift wie oben)</p>"
-},
+  },
   "footer": {
     "imprint": "Impressum",
     "privacy": "Datenschutzerklärung"
   }
-
 }

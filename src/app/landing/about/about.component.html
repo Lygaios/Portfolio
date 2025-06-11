@@ -1,5 +1,5 @@
 <section id="about" class="about-container container">
-   <div class="anchor-spacer" aria-hidden="true"></div>
+  <div class="anchor-spacer" aria-hidden="true"></div>
   <h2 class="about-title section-title">{{ "about.title" | translate }}</h2>
   <div class="about-content">
     <div class="about-content-left">
@@ -30,17 +30,16 @@
       </div>
     </div>
   </div>
-<a
-  [routerLink]="['/']"
-  fragment="skills"
-  class="arrow-wrapper arrow-southwest"
-  [ngClass]="{
-    animated: isArrowAnimated,
-    final: hasAnimationFinished
-  }"
-  (mouseenter)="animateArrowOnce()"
->
-  <div class="arrow-frame"></div>
-</a>
-
+  <a
+    [routerLink]="['/']"
+    fragment="skills"
+    class="arrow-wrapper arrow-southwest"
+    [ngClass]="{
+      animated: isArrowAnimated,
+      final: hasAnimationFinished
+    }"
+    (mouseenter)="animateArrowOnce()"
+  >
+    <div class="arrow-frame"></div>
+  </a>
 </section>

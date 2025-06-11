@@ -88,7 +88,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 9rem; // initial width
+  width: 9rem;
   height: auto;
   padding: 0.6rem 1rem;
   font-size: 1.3rem;
@@ -100,7 +100,7 @@ a:hover {
   transition: width 100ms ease, font-weight 100ms ease;
 
   &:hover {
-    width: 11.5rem; // expand to the right
+    width: 11.5rem;
     font-weight: bold;
   }
 }
@@ -112,16 +112,12 @@ a:hover {
   width: 100%;
   cursor: pointer;
 
-  // Default (southwest) points right
   justify-content: flex-end;
-
 }
 
-// For southeast arrow → override to left side
 .arrow-southeast {
   justify-content: flex-start;
 }
-
 
 .arrow-frame {
   width: 11rem;
@@ -133,19 +129,16 @@ a:hover {
   transform: translate(0, 0);
 }
 
-
 .arrow-southwest .arrow-frame {
   background-image: url("/assets/img/arrow-southwest-1.png");
   transform: translate(0, 0);
 }
 
 .arrow-southwest.animated .arrow-frame {
-  animation:
-    animateArrowSouthwest 300ms steps(2) forwards,
+  animation: animateArrowSouthwest 300ms steps(2) forwards,
     moveArrowSouthwest 300ms ease forwards;
 }
 
-// Lock in final frame after animation
 .arrow-southwest.final .arrow-frame {
   background-image: url("/assets/img/arrow-southwest-3.png");
   transform: translate(-1rem, 1rem);
@@ -163,7 +156,6 @@ a:hover {
     height: 8rem;
   }
 }
-
 
 @keyframes animateArrowSouthwest {
   0% {
@@ -192,14 +184,13 @@ a:hover {
 }
 
 .arrow-southeast.animated .arrow-frame {
-  animation:
-    animateArrowSoutheast 300ms steps(2) forwards,
+  animation: animateArrowSoutheast 300ms steps(2) forwards,
     moveArrowSoutheast 300ms ease forwards;
 }
 
 .arrow-southeast.final .arrow-frame {
   background-image: url("/assets/img/arrow-southeast-3.png");
-  transform: translate(1rem, 1rem); // mirrored movement
+  transform: translate(1rem, 1rem);
 }
 
 @keyframes animateArrowSoutheast {
@@ -219,6 +210,6 @@ a:hover {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(1rem, 1rem); // moves to bottom right
+    transform: translate(1rem, 1rem);
   }
 }

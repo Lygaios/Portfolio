@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from "@ngx-translate/core";
+import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent {
   isArrowAnimated = false;
@@ -21,7 +21,7 @@ export class SkillsComponent {
       setTimeout(() => {
         this.hasAnimationFinished = true;
         this.isArrowAnimated = false;
-      }, 300); // match animation duration
+      }, 300);
     }
   }
 }

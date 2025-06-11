@@ -48,7 +48,6 @@ h3 {
   z-index: 2;
   top: -1.9rem;
 
-  // desktop default
   &.odd {
     right: 1rem;
   }
@@ -57,7 +56,6 @@ h3 {
     left: 1rem;
   }
 
-  // mobile layout
   @media (max-width: 1000px) {
     font-size: 2.2rem;
 
@@ -107,7 +105,6 @@ h3 {
   }
 }
 
-/* Image reveal triggered by parent item */
 .portfolio-item.hovered .image-wrapper img,
 .portfolio-item:hover .image-wrapper img {
   filter: grayscale(0%);
@@ -153,7 +150,6 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
 
-  // Start pointing "down"
   transform: rotate(135deg);
   transition: transform 100ms ease;
 }
@@ -194,7 +190,6 @@ h3 {
   }
 }
 
-/* TEXT CONTAINER: When visible (hovered) */
 .portfolio-item.hovered .text-container,
 .portfolio-item:hover .text-container {
   opacity: 1;
@@ -261,7 +256,7 @@ h3 {
     width: 1rem;
     height: 1rem;
   }
-   .number-label {
+  .number-label {
     top: -1.5rem;
 
     &.odd {

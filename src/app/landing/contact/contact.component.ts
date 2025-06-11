@@ -60,7 +60,7 @@ export class ContactComponent {
   constructor(private router: Router) {}
 
   openPrivacyInNewTab(event: MouseEvent) {
-    event.preventDefault(); // prevent default anchor click behavior
+    event.preventDefault();
 
     const urlTree = this.router.createUrlTree(['/privacy']);
     const url = this.router.serializeUrl(urlTree);

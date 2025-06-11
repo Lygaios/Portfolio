@@ -66,7 +66,6 @@
   transition: padding-left 100ms ease, padding-right 100ms ease,
     font-weight 100ms ease;
 
-  // expand equally on both sides
   &:hover {
     padding-left: 2rem;
     padding-right: 2rem;

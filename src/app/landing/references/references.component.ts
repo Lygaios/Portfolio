@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from "@ngx-translate/core";
+import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './references.component.html',
-  styleUrls: ['./references.component.scss']
+  styleUrls: ['./references.component.scss'],
 })
 export class ReferencesComponent {
   isArrowAnimated = false;

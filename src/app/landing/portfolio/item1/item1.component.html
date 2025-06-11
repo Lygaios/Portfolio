@@ -1,17 +1,17 @@
-<div class="portfolio-item" [ngClass]="{ odd: isOdd, even: !isOdd, hovered: isHovered }">
+<div
+  class="portfolio-item"
+  [ngClass]="{ odd: isOdd, even: !isOdd, hovered: isHovered }"
+>
   <div class="number-label" [ngClass]="{ odd: isOdd, even: !isOdd }">01/02</div>
   <div class="image-container">
-      <div
-        class="image-wrapper"
-        (click)="toggleHover()"
-      >
-        <img [src]="imageUrl" [alt]="title" />
-        <div class="image-frame odd">
-          <div class="arrow-circle">
-            <span class="arrow-icon"></span>
-          </div>
+    <div class="image-wrapper" (click)="toggleHover()">
+      <img [src]="imageUrl" [alt]="title" />
+      <div class="image-frame odd">
+        <div class="arrow-circle">
+          <span class="arrow-icon"></span>
         </div>
       </div>
+    </div>
   </div>
 
   <div class="text-container">
@@ -21,8 +21,16 @@
       {{ "portfolio.projects.join.description" | translate }}
     </p>
     <div class="portfolio-links">
-      <a href="https://github.com/JoshuaBrunke" target="_blank" rel="noopener" class="portfolio-button">Github</a>
-      <a href="#" target="_blank" rel="noopener" class="portfolio-button">Start</a>
+      <a
+        href="https://github.com/JoshuaBrunke"
+        target="_blank"
+        rel="noopener"
+        class="portfolio-button"
+        >Github</a
+      >
+      <a href="#" target="_blank" rel="noopener" class="portfolio-button"
+        >Start</a
+      >
     </div>
   </div>
 </div>

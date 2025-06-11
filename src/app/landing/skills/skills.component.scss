@@ -12,7 +12,7 @@
 .skills-outer-box {
   position: relative;
   border: 3px solid var(--color-text);
-  padding: 5rem 2rem 4rem; // more breathing room: top right/left bottom
+  padding: 5rem 2rem 4rem;
   margin-block: 3rem;
   display: flex;
   flex-direction: column;
@@ -20,10 +20,9 @@
   justify-content: center;
 }
 
-
 .skills-title {
   position: absolute;
-  top: -2.4rem; // shift up enough to center the large text over the border
+  top: -2.4rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 0 1rem;
@@ -31,7 +30,6 @@
   z-index: 1;
   text-align: center;
 }
-
 
 .skills-inner-box {
   display: flex;
@@ -45,13 +43,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem 4rem; // row gap, column gap
-  max-width: 700px; // optional: constrains width to form 2 rows on large screens
+  gap: 3rem 4rem;
+  max-width: 700px;
   width: 100%;
   margin-bottom: 2rem;
 }
-
-
 
 .skill-icon-box {
   display: flex;
@@ -145,7 +141,6 @@
     transform-origin: right;
   }
 }
-
 
 .skills-bottom-arrow-container {
   display: flex;
