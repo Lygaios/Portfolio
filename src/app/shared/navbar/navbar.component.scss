@@ -32,47 +32,27 @@
 }
 
 .animate-open {
-  animation: burgerOpen 0.5s steps(4) forwards;
+  animation: burgerOpen 120ms steps(4) forwards;
 }
 
 .animate-close {
-  animation: burgerClose 0.5s steps(4);
+  animation: burgerClose 120ms steps(4);
 }
 
 @keyframes burgerOpen {
-  0% {
-    background-image: url("/assets/img/burger-button-1.png");
-  }
-  25% {
-    background-image: url("/assets/img/burger-button-2.png");
-  }
-  50% {
-    background-image: url("/assets/img/burger-button-3.png");
-  }
-  75% {
-    background-image: url("/assets/img/burger-button-4.png");
-  }
-  100% {
-    background-image: url("/assets/img/burger-button-5.png");
-  }
+  0% { background-image: url("/assets/img/burger-button-1.png"); }
+  25% { background-image: url("/assets/img/burger-button-2.png"); }
+  50% { background-image: url("/assets/img/burger-button-3.png"); }
+  75% { background-image: url("/assets/img/burger-button-4.png"); }
+  100% { background-image: url("/assets/img/burger-button-5.png"); }
 }
 
 @keyframes burgerClose {
-  0% {
-    background-image: url("/assets/img/burger-button-5.png");
-  }
-  25% {
-    background-image: url("/assets/img/burger-button-6.png");
-  }
-  50% {
-    background-image: url("/assets/img/burger-button-7.png");
-  }
-  75% {
-    background-image: url("/assets/img/burger-button-8.png");
-  }
-  100% {
-    background-image: url("/assets/img/burger-button-1.png");
-  }
+  0% { background-image: url("/assets/img/burger-button-5.png"); }
+  25% { background-image: url("/assets/img/burger-button-6.png"); }
+  50% { background-image: url("/assets/img/burger-button-7.png"); }
+  75% { background-image: url("/assets/img/burger-button-8.png"); }
+  100% { background-image: url("/assets/img/burger-button-1.png"); }
 }
 
 .language-toggle {
@@ -85,7 +65,7 @@
   padding: 0.2rem 0.5rem;
   position: relative;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: color 100ms ease-in-out;
 }
 
 .lang-option.selected {
@@ -100,7 +80,7 @@
   width: 70%;
   height: 2px;
   background-color: black;
-  transition: width 0.3s ease;
+  transition: width 100ms ease;
 }
 
 .overlay-wrapper {
@@ -119,7 +99,11 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(-100%);
-  animation: slideIn 0.5s ease-out forwards;
+  animation: slideIn 100ms ease-out forwards;
+}
+
+@keyframes slideIn {
+  to { transform: translateY(0); }
 }
 
 .overlay-link-box {
@@ -131,7 +115,6 @@
   text-align: center;
   padding: 1rem 2rem;
 
-  // All links inside get heading font & size
   a.overlay-link {
     font-family: var(--font-heading);
     font-size: 32px;
@@ -139,6 +122,7 @@
     text-align: center;
   }
 }
+
 .overlay-link {
   position: relative;
   display: inline-block;
@@ -149,16 +133,14 @@
   padding: 0.25em 0.5em;
   cursor: pointer;
 
-  // L-corner lines
   &::before,
   &::after {
     content: "";
     position: absolute;
     background-color: black;
-    transition: all 0.2s ease;
+    transition: all 100ms ease;
   }
 
-  // Horizontal L line (bottom)
   &::before {
     width: 28px;
     height: 3px;
@@ -167,7 +149,6 @@
     z-index: 1;
   }
 
-  // Vertical L line (side)
   &::after {
     width: 3px;
     height: 28px;
@@ -176,7 +157,6 @@
     z-index: 1;
   }
 
-  // Extra rectangle element for click animation
   span.click-box {
     position: absolute;
     top: 0;
@@ -186,10 +166,9 @@
     border: 3px solid black;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 100ms ease;
   }
 
-  // On active: hide L, show box
   &:active::before,
   &:active::after {
     opacity: 0;
@@ -199,7 +178,6 @@
     opacity: 1;
   }
 
-  // Underline span animation
   .underline {
     position: absolute;
     bottom: 0;
@@ -207,13 +185,13 @@
     height: 3px;
     background-color: black;
     width: 0%;
-    transition: width 0.3s ease, left 0.3s ease;
+    transition: width 100ms ease, left 100ms ease;
   }
 
   &:hover .underline {
     width: 100%;
     left: 0;
-    animation: shrinkUnderline 0.6s forwards ease;
+    animation: shrinkUnderline 125ms forwards ease;
   }
 
   @keyframes shrinkUnderline {
@@ -284,13 +262,7 @@
 
 .socmed-icon:hover {
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-@keyframes slideIn {
-  to {
-    transform: translateY(0);
-  }
+  transition: transform 100ms ease-in-out;
 }
 
 @media (max-width: 1000px) {
@@ -335,7 +307,6 @@
     font-size: 18px;
   }
 }
-
 
 @media (min-width: 1001px) {
   .mobile-only {

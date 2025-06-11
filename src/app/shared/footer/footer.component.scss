@@ -1,14 +1,14 @@
 .footer-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    max-width: 1440px;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-    padding-inline: 1rem;
-    background-color: var(--color-text);
-    color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  max-width: 1440px;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  padding-inline: 1rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
 }
 a {
   color: var(--color-bg);
@@ -19,29 +19,28 @@ a:hover {
   cursor: pointer;
 }
 
-
 .footer-upper-box {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1440px;
-    padding-inline: 1rem;
-    box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  padding-inline: 1rem;
+  box-sizing: border-box;
 }
 .footer-link-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.5rem;
-    padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-inline: 1rem;
 }
 
 .social-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 2rem;
-    padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 2rem;
+  padding-bottom: 1rem;
 }
 
 .socmed-icon {
@@ -54,8 +53,41 @@ a:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-  @media (max-width: 1000px) {
-   h2 {
-     font-size: 3rem;
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-upper-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-links {
+    order: 1;
+    justify-content: center;
+  }
+
+  .footer-logo-box {
+    order: 2;
+    align-items: center;
+    text-align: center;
+
+    .logo {
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright-text {
+      font-size: 0.9rem;
     }
   }
+
+  .footer-link-box {
+    order: 3;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
