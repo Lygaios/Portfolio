@@ -14,7 +14,8 @@
   },
   "about": {
     "title": "About me",
-    "description": "I am a passionate web developer with experience in Angular and other modern technologies.",
+    "description1": "I am a web developer with a particular passion for clarity and user-friendliness. I love to come up with and implement new ideas within an internally coherent package, and my workflow makes distinct use of intuition - both my own and the users'. ",
+    "description2": "I have always enjoyed technology and creative work on websites. Having turned my dream into a solid knowledge base and a career, I am continually eager to learn more and expand my skills.",
     "location": "Location: Langelsheim, Lower Saxony, Germany",
     "remote": "Looking for remote work",
     "talk": "Let's talk!"
