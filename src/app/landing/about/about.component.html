@@ -17,7 +17,9 @@
         </div>
       </div>
       <div class="about-talk-button-container">
-        <p class="about-talk-text">{{ "about.talk" | translate }}</p>
+        <a [routerLink]="['/']" fragment="contact" class="about-talk-button">
+          {{ "about.talk" | translate }}
+        </a>
       </div>
     </div>
     <div class="about-content-right">

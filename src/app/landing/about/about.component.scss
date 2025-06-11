@@ -1,106 +1,135 @@
 .about-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-inline: 1rem;
 }
 
 .about-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .about-content-left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 .about-content-left-top {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 .about-data-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .about-data-item {
-    display: flex; 
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 .about-talk-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-talk-button-container:hover {
+.about-talk-button {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  border: 3px solid var(--color-text);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  transition: padding-left 100ms ease, padding-right 100ms ease,
+    font-weight 100ms ease;
+
+  // expand equally on both sides
+  &:hover {
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: bold;
+  }
 }
 
 .about-talk-text {
-    text-align: center;
-    font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .about-content-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 .about-photo {
-    width: 400px;
-    height: auto;
+  width: 400px;
+  height: auto;
 }
 
 .about-bottom-arrow-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .about-bottom-arrow-container:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .about-bottom-arrow {
-    width: 11rem;
-    height: 11rem;
-    background-image: url("/assets/img/arrow-southwest-1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+  width: 11rem;
+  height: 11rem;
+  background-image: url("/assets/img/arrow-southwest-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-  @media (max-width: 1000px) {
-   h2 {
-     font-size: 3rem;
-    }
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 3rem;
+  }
 
-    .about-photo {
+  .about-photo {
     max-width: 300px;
     height: auto;
-}
   }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .about-photo {
+    max-width: 200px;
+    height: auto;
+  }
+}
