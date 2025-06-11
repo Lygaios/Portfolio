@@ -65,7 +65,7 @@
     "nameError": "Please enter your name.",
     "emailError": "Please enter a valid email address.",
     "messageError": "Please enter a message.",
-    "privacyPolicyError": "You must accept the privacy policy to continue."
+    "privacyError": "You must accept the privacy policy to continue."
   },
   "imprint": {
   "title": "Imprint",

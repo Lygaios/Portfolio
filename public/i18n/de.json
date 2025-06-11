@@ -65,7 +65,7 @@
     "nameError": "Bitte geben Sie Ihren Namen ein.",
     "emailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "messageError": "Bitte geben Sie eine Nachricht ein.",
-    "privacyPolicyError": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren."
+    "privacyError": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren."
   },
   "imprint": {
     "title": "Impressum",
