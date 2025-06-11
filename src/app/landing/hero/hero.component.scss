@@ -1,69 +1,98 @@
 .hero-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    height: auto;
-    min-height: 800px;
-    max-height: 100vh;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  height: auto;
+  min-height: 800px;
+  max-height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-inline: 1rem;
 }
 
 .hero-top {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-bottom {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero-title {
-    font-size: 5rem;
-    text-align: center;
-    flex-wrap: wrap;
+  font-size: 5rem;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .hero-subtitle-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-subtitle {
-    font-size: 2.5rem;
-    text-align: right;
-    font-weight: bold;
+  font-size: 2.5rem;
+  text-align: right;
+  font-weight: bold;
+  color: var(--color-highlight);
+}
+
+.hero-email-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1rem; // ✅ Accessibility-safe
+  color: var(--color-text);
+  padding: 0.5rem;
+  text-decoration: none;
+  user-select: none;
+  transition: color 100ms ease;
+
+  &:hover {
     color: var(--color-highlight);
+    cursor: pointer;
+  }
+
+  // Adjust layout without shrinking font size
+  @media (max-width: 600px) {
+    padding: 0.25rem;
+  }
 }
 
 .scroll-down-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-down-text {
-    text-align: center;
-    flex-wrap: wrap;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-  @media (max-width: 1000px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 2rem;
-    }
+@media (max-width: 1000px) {
+  .hero-title {
+    font-size: 3.5rem;
   }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-bottom {
+    gap: 0.5rem; // give breathing room
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+  }
+}
