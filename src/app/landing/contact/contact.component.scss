@@ -288,3 +288,44 @@ input[type="submit"] {
   font-weight: bold;
   text-align: center;
 }
+
+.contact-bottom-arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem 0 1rem; // Top + horizontal padding
+}
+
+.contact-bottom-arrow-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 1.5rem;
+  cursor: pointer;
+
+  &:hover .contact-bottom-arrow {
+    animation: animateArrowUp 250ms steps(1) forwards;
+  }
+}
+
+.contact-bottom-arrow {
+  width: 5rem;
+  height: 5rem;
+  background-image: url("/assets/img/arrow-up-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 100ms ease;
+  padding-bottom: 1rem;
+}
+
+@keyframes animateArrowUp {
+  0% {
+    background-image: url("/assets/img/arrow-up-1.png");
+  }
+  100% {
+    background-image: url("/assets/img/arrow-up-2.png");
+  }
+}
+
