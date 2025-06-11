@@ -3,14 +3,17 @@
   flex-direction: column;
   justify-content: flex-end;
   background-image: url(/assets/img/contact-slope-h900.png);
-  height: 900px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: bottom center;
-  box-sizing: border-box;
+  background-attachment: local; 
+  height: 900px;
+  position: relative;
 }
 
+
 .contact-container {
+  
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -66,7 +69,8 @@ input[type="text"],
 [type="email"],
 select,
 textarea {
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   padding: 12px;
   border: 1px solid var(--color-bg);
   box-sizing: border-box;
