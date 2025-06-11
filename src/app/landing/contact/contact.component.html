@@ -54,28 +54,24 @@
           required
         ></textarea>
         <div class="privacy-policy-box">
-  <input
-    type="checkbox"
-    id="privacyPolicy"
-    name="privacyPolicy"
-    [(ngModel)]="contactData.privacyPolicy"
-    required
-  />
-  <label for="privacyPolicy">
-    {{ "contact.privacyPolicy1" | translate }}
-  </label>
-  <a
-    routerLink="/privacy"
-    target="_blank"
-    rel="noopener"
-    class="privacy-link"
-  >
-    {{ "contact.privacyPolicy2" | translate }}
-  </a>
-  <span>
-    {{ "contact.privacyPolicy3" | translate }}
-  </span>
-</div>
+          <input
+            type="checkbox"
+            id="privacyPolicy"
+            name="privacyPolicy"
+            [(ngModel)]="contactData.privacyPolicy"
+            required
+          />
+          <label for="privacyPolicy">
+            {{ "contact.privacyPolicy1" | translate }}
+          </label>
+          <a href="" (click)="openPrivacyInNewTab($event)" class="privacy-link">
+            {{ "contact.privacyPolicy2" | translate }}
+          </a>
+
+          <span>
+            {{ "contact.privacyPolicy3" | translate }}
+          </span>
+        </div>
 
         <ng-container *ngIf="!name.valid && name.touched && !name.disabled">
           <p class="error-message">{{ "contact.nameError" | translate }}</p>
