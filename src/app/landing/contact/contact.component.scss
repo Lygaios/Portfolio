@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url(/assets/img/contact-slope-h900.png);
+  background-image: url(assets/img/contact-slope-h900.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -313,7 +313,7 @@ input[type="submit"] {
 .contact-bottom-arrow {
   width: 5rem;
   height: 5rem;
-  background-image: url("/assets/img/arrow-up-1.png");
+  background-image: url("assets/img/arrow-up-1.png");
   background-repeat: no-repeat;
   background-size: contain;
   transition: transform 100ms ease;
@@ -322,10 +322,10 @@ input[type="submit"] {
 
 @keyframes animateArrowUp {
   0% {
-    background-image: url("/assets/img/arrow-up-1.png");
+    background-image: url("assets/img/arrow-up-1.png");
   }
   100% {
-    background-image: url("/assets/img/arrow-up-2.png");
+    background-image: url("assets/img/arrow-up-2.png");
   }
 }
 
