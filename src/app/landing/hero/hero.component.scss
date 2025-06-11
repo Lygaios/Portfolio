@@ -85,17 +85,50 @@
 }
 
 .scroll-down-arrow {
-  background-image: url(/assets/img/scroll-down-arrow-4.png);
+  background-image: url("/assets/img/scroll-down-arrow-3.png");
   width: 40px;
-  height: 80px;
+  height: 100px;
   background-size: contain;
   background-repeat: no-repeat;
+  transition:     transform 120ms ease-in-out,
+    background-image 0s;
+}
+.scroll-down-arrow:hover {
+  animation: scrollArrow 750ms steps(7) infinite;
+  transform: translateY(5px);
 }
 
-.scroll-down-arrow:hover {
-  transform: translateY(5px);
-  transition: transform 0.2s ease-in-out;
+
+
+
+@keyframes scrollArrow {
+  0% {
+    background-image: url("/assets/img/scroll-down-arrow-1.png");
+  }
+  14% {
+    background-image: url("/assets/img/scroll-down-arrow-2.png");
+  }
+  28% {
+    background-image: url("/assets/img/scroll-down-arrow-3.png");
+  }
+  42% {
+    background-image: url("/assets/img/scroll-down-arrow-4.png");
+  }
+  57% {
+    background-image: url("/assets/img/scroll-down-arrow-5.png");
+  }
+  71% {
+    background-image: url("/assets/img/scroll-down-arrow-6.png");
+  }
+  85% {
+    background-image: url("/assets/img/scroll-down-arrow-7.png");
+  }
+  100% {
+    background-image: url("/assets/img/scroll-down-arrow-1.png"); // Loop point
+  }
 }
+
+
 
 .scroll-down-text {
   text-align: center;
