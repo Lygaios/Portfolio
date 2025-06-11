@@ -1,7 +1,7 @@
 <section class="hero-container container">
   <div class="hero-top">
-    <h1 class="hero-title">Frontend </h1>
-    <h1 class="hero-title"> Developer</h1>
+    <h1 class="hero-title">Frontend</h1>
+    <h1 class="hero-title">Developer</h1>
     <div class="hero-subtitle-box">
       <div class="hero-subtitle-line"></div>
       <p class="hero-subtitle">Joshua Brunke</p>
@@ -9,7 +9,10 @@
   </div>
 
   <div class="hero-bottom">
-    <p class="hero-email-vertical">{{ "joshuabrunke1@gmail.com" }}</p>
+    <a [routerLink]="['/']" fragment="contact" class="hero-email-vertical">
+      joshuabrunke1&#64;gmail.com
+    </a>
+
     <div class="scroll-down-box">
       <div class="scroll-down-arrow"></div>
       <p class="scroll-down-text">{{ "hero.scrollDown1" | translate }}</p>
