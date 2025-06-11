@@ -8,7 +8,9 @@
   src: url("/assets/fonts/Syne-VariableFont_wght.ttf") format("truetype");
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -17,11 +19,12 @@
   --font-heading: "Syne", sans-serif;
   --color-bg: #fffcf3;
   --color-text: #000000;
-  --color-highlight: #4B47FF;
+  --color-highlight: #4b47ff;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 20rem;
 }
 
 body {
@@ -73,6 +76,14 @@ a:hover {
   margin: 0 auto;
 }
 
+.anchor-spacer {
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .portfolio-button {
   display: inline-flex;
   align-items: center;
@@ -86,12 +97,128 @@ a:hover {
   border: 3px solid var(--color-text);
   text-decoration: none;
   font-weight: normal;
-  transition:
-    width 100ms ease,
-    font-weight 100ms ease;
+  transition: width 100ms ease, font-weight 100ms ease;
 
   &:hover {
     width: 11.5rem; // expand to the right
     font-weight: bold;
+  }
+}
+
+.arrow-wrapper {
+  display: flex;
+  align-items: center;
+  padding-block: 2rem;
+  width: 100%;
+  cursor: pointer;
+
+  // Default (southwest) points right
+  justify-content: flex-end;
+
+}
+
+// For southeast arrow → override to left side
+.arrow-southeast {
+  justify-content: flex-start;
+}
+
+
+.arrow-frame {
+  width: 11rem;
+  height: 11rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/assets/img/arrow-southwest-1.png");
+  transition: transform 300ms ease;
+  transform: translate(0, 0);
+}
+
+
+.arrow-southwest .arrow-frame {
+  background-image: url("/assets/img/arrow-southwest-1.png");
+  transform: translate(0, 0);
+}
+
+.arrow-southwest.animated .arrow-frame {
+  animation:
+    animateArrowSouthwest 300ms steps(2) forwards,
+    moveArrowSouthwest 300ms ease forwards;
+}
+
+// Lock in final frame after animation
+.arrow-southwest.final .arrow-frame {
+  background-image: url("/assets/img/arrow-southwest-3.png");
+  transform: translate(-1rem, 1rem);
+}
+
+@media (max-width: 1000px) {
+  .arrow-wrapper,
+  .arrow-southeast.arrow-wrapper {
+    justify-content: center;
+    padding-block: 1.5rem;
+  }
+
+  .arrow-frame {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+
+@keyframes animateArrowSouthwest {
+  0% {
+    background-image: url("/assets/img/arrow-southwest-1.png");
+  }
+  50% {
+    background-image: url("/assets/img/arrow-southwest-2.png");
+  }
+  100% {
+    background-image: url("/assets/img/arrow-southwest-3.png");
+  }
+}
+
+@keyframes moveArrowSouthwest {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-1rem, 1rem);
+  }
+}
+
+.arrow-southeast .arrow-frame {
+  background-image: url("/assets/img/arrow-southeast-1.png");
+  transform: translate(0, 0);
+}
+
+.arrow-southeast.animated .arrow-frame {
+  animation:
+    animateArrowSoutheast 300ms steps(2) forwards,
+    moveArrowSoutheast 300ms ease forwards;
+}
+
+.arrow-southeast.final .arrow-frame {
+  background-image: url("/assets/img/arrow-southeast-3.png");
+  transform: translate(1rem, 1rem); // mirrored movement
+}
+
+@keyframes animateArrowSoutheast {
+  0% {
+    background-image: url("/assets/img/arrow-southeast-1.png");
+  }
+  50% {
+    background-image: url("/assets/img/arrow-southeast-2.png");
+  }
+  100% {
+    background-image: url("/assets/img/arrow-southeast-3.png");
+  }
+}
+
+@keyframes moveArrowSoutheast {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1rem, 1rem); // moves to bottom right
   }
 }

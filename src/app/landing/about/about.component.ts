@@ -11,5 +11,17 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  isArrowAnimated = false;
+  hasAnimationFinished = false;
 
+  animateArrowOnce() {
+    if (!this.isArrowAnimated && !this.hasAnimationFinished) {
+      this.isArrowAnimated = true;
+
+      setTimeout(() => {
+        this.hasAnimationFinished = true;
+        this.isArrowAnimated = false;
+      }, 300); // match animation duration
+    }
+  }
 }

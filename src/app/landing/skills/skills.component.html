@@ -1,4 +1,5 @@
 <section id="skills" class="skills-container container">
+   <div class="anchor-spacer" aria-hidden="true"></div>
   <div class="skills-outer-box">
     <h2 class="skills-title section-title">{{ "skills.title" | translate }}</h2>
     <div class="skills-inner-box">
@@ -46,7 +47,14 @@
       </div>
     </div>
   </div>
-    <div class="skills-bottom-arrow-container">
-    <div class="skills-bottom-arrow"></div>
-  </div>
+<a
+  [routerLink]="['/']"
+  fragment="portfolio"
+  class="arrow-wrapper arrow-southeast"
+  [ngClass]="{ 'animated': isArrowAnimated, final: hasAnimationFinished }"
+  (mouseenter)="animateArrowOnce()"
+>
+  <div class="arrow-frame"></div>
+</a>
+
 </section>
