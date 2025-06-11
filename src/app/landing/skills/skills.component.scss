@@ -1,101 +1,189 @@
 .skills-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-inline: 1rem;
 }
 
 .skills-outer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  border: 3px solid var(--color-text);
+  padding: 5rem 2rem 4rem; // more breathing room: top right/left bottom
+  margin-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+
+.skills-title {
+  position: absolute;
+  top: -2.4rem; // shift up enough to center the large text over the border
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1rem;
+  background-color: var(--color-bg);
+  z-index: 1;
+  text-align: center;
+}
+
+
 .skills-inner-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .skills-inner-box-top {
-    display: flex;
-    flex-direction: row;
-    align-items: space-around;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem 4rem; // row gap, column gap
+  max-width: 700px; // optional: constrains width to form 2 rows on large screens
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-.skill-icon-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
 
+
+.skill-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .skill-icon-box:hover {
-    color: var(--color-highlight);
+  color: var(--color-highlight);
 }
 
 .skill-icon {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .skill-icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 .skill-text {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .skill-text:hover {
-    color: var(--color-highlight);
+  color: var(--color-highlight);
 }
 
 .skills-inner-box-bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 1rem;
 }
 
+.continued-text {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.continued-link {
+  display: inline-block;
+  color: var(--color-highlight);
+  font-weight: normal;
+  position: relative;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.continued-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-highlight);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.continued-link:hover {
+  font-weight: bold;
+}
+
+.continued-link:hover::after {
+  animation: underline-to-half 0.4s forwards;
+}
+
+@keyframes underline-to-half {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0.5);
+    transform-origin: right;
+  }
+}
+
+
 .skills-bottom-arrow-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .skills-bottom-arrow-container:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .skills-bottom-arrow {
-    width: 11rem;
-    height: 11rem;
-    background-image: url("/assets/img/arrow-southeast-1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+  width: 11rem;
+  height: 11rem;
+  background-image: url("/assets/img/arrow-southeast-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-  @media (max-width: 1000px) {
-   h2 {
-     font-size: 3rem;
-    }
+@media (max-width: 1000px) {
+  .skills-title {
+    font-size: 3rem;
+    top: -2rem;
   }
+}
+
+@media (max-width: 600px) {
+  .skills-title {
+    font-size: 2rem;
+    top: -1.6rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .skills-title {
+    font-size: 1.5rem;
+    top: -1.3rem;
+  }
+}

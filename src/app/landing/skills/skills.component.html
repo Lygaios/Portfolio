@@ -1,60 +1,108 @@
 <section id="skills" class="skills-container container">
-   <div class="anchor-spacer" aria-hidden="true"></div>
+  <div class="anchor-spacer" aria-hidden="true"></div>
   <div class="skills-outer-box">
     <h2 class="skills-title section-title">{{ "skills.title" | translate }}</h2>
     <div class="skills-inner-box">
       <div class="skills-inner-box-top">
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-angular.png" alt="Angular icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-angular.png"
+            alt="Angular icon"
+          />
           <p class="skill-text">Angular</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-typescript.png" alt="TypeScript icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-typescript.png"
+            alt="TypeScript icon"
+          />
           <p class="skill-text">TypeScript</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-javascript.png" alt="JavaScript icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-javascript.png"
+            alt="JavaScript icon"
+          />
           <p class="skill-text">JavaScript</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-html.png" alt="HTML icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-html.png"
+            alt="HTML icon"
+          />
           <p class="skill-text">HTML</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-css.png" alt="CSS icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-css.png"
+            alt="CSS icon"
+          />
           <p class="skill-text">CSS</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-firebase.png" alt="Firebase icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-firebase.png"
+            alt="Firebase icon"
+          />
           <p class="skill-text">Firebase</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-git.png" alt="Git icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-git.png"
+            alt="Git icon"
+          />
           <p class="skill-text">Git</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-scrum.png" alt="Scrum icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-scrum.png"
+            alt="Scrum icon"
+          />
           <p class="skill-text">Scrum</p>
         </div>
         <div class="skill-icon-box">
-          <img class="skill-icon" src="assets/img/skill-icon-api.png" alt="Rest API icon" />
+          <img
+            class="skill-icon"
+            src="assets/img/skill-icon-api.png"
+            alt="Rest API icon"
+          />
           <p class="skill-text">Rest API</p>
         </div>
       </div>
       <div class="skills-inner-box-bottom">
-        <img class="skill-icon" src="/assets/img/skill-icon-continue.png" alt="Continued learning icon" />
-        <p class="continued-text">{{ "skills.continuedLearning1" | translate }} {{ "skills.continuedLearning2" | translate }}</p>
+        <img
+          class="skill-icon"
+          src="/assets/img/skill-icon-continue.png"
+          alt="Continued learning icon"
+        />
+        <p class="continued-text">
+          <a
+            [routerLink]="['/']"
+            fragment="contact"
+            class="continued-link"
+          >
+            {{ "skills.continuedLearning1" | translate }}
+          </a>
+          {{ "skills.continuedLearning2" | translate }}
+        </p>
       </div>
     </div>
   </div>
-<a
-  [routerLink]="['/']"
-  fragment="portfolio"
-  class="arrow-wrapper arrow-southeast"
-  [ngClass]="{ 'animated': isArrowAnimated, final: hasAnimationFinished }"
-  (mouseenter)="animateArrowOnce()"
->
-  <div class="arrow-frame"></div>
-</a>
-
+  <a
+    [routerLink]="['/']"
+    fragment="portfolio"
+    class="arrow-wrapper arrow-southeast"
+    [ngClass]="{ animated: isArrowAnimated, final: hasAnimationFinished }"
+    (mouseenter)="animateArrowOnce()"
+  >
+    <div class="arrow-frame"></div>
+  </a>
 </section>
