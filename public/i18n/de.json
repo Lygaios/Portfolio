@@ -59,7 +59,13 @@
     "messagePlaceholder": "Ihre Nachricht",
     "privacyPolicy1": "Ich habe die",
     "privacyPolicy2": "Datenschutzerklärung",
-    "privacyPolicy3": "gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu."
+    "privacyPolicy3": "gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "submit": "Absenden",
+    "successMessage": "Vielen Dank für Ihre Nachricht! Ich werde mich schnellstmöglich bei Ihnen melden.",
+    "nameError": "Bitte geben Sie Ihren Namen ein.",
+    "emailError": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageError": "Bitte geben Sie eine Nachricht ein.",
+    "privacyPolicyError": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren."
   },
   "imprint": {
     "title": "Impressum",

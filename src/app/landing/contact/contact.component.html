@@ -17,7 +17,6 @@
         #contactForm="ngForm"
         class="contact-form"
       >
-        <label for="name">{{ "contact.name" | translate }}</label>
         <input
           #name="ngModel"
           minlength="2"
@@ -30,7 +29,6 @@
           required
         />
 
-        <label for="email">{{ "contact.email" | translate }}</label>
         <input
           #email="ngModel"
           [(ngModel)]="contactData.email"
@@ -42,7 +40,6 @@
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
 
-        <label for="message">{{ "contact.message" | translate }}</label>
         <textarea
           #message="ngModel"
           minlength="10"
@@ -64,7 +61,7 @@
           <label for="privacyPolicy">
             {{ "contact.privacyPolicy1" | translate }}
           </label>
-          <a href="" (click)="openPrivacyInNewTab($event)" class="privacy-link">
+          <a href="#" (click)="openPrivacyInNewTab($event)" class="privacy-link">
             {{ "contact.privacyPolicy2" | translate }}
           </a>
 
