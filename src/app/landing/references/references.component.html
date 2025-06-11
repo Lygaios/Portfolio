@@ -1,39 +1,46 @@
 <section id="references" class="references-container container">
-   <div class="anchor-spacer" aria-hidden="true"></div>
-    <div class="references-title-box">
-      <h2 class="references-title section-title">{{ "references.title" | translate }}</h2>
-      <p class="references-subtitle">{{ "references.subtitle" | translate }}</p>
+  <div class="anchor-spacer" aria-hidden="true"></div>
+  <div class="references-title-box">
+    <h2 class="references-title section-title">
+      {{ "references.title" | translate }}
+    </h2>
+    <p class="references-subtitle">{{ "references.subtitle" | translate }}</p>
+  </div>
+
+  <div class="references-box">
+    <div class="references-item">
+      <h3 class="references-quote-mark">”</h3>
+      <h4 class="references-name">M. Hansen</h4>
+      <p class="references-job-title">
+        {{ "references.jobTitle1" | translate }}
+      </p>
+      <p class="references-text">{{ "references.text1" | translate }}</p>
     </div>
-
-<div class="references-box">
-  <div class="references-item">
-    <h3 class="references-quote-mark">”</h3>
-    <h4 class="references-name">M. Hansen</h4>
-    <p class="references-job-title">{{ "references.jobTitle1" | translate }}</p>
-    <p class="references-text">{{ "references.text1" | translate }}</p>
-  </div>
     <div class="references-item">
-    <h3 class="references-quote-mark">”</h3>
-    <h4 class="references-name">R. Jäger</h4>
-    <p class="references-job-title">{{ "references.jobTitle2" | translate }}</p>
-    <p class="references-text">{{ "references.text2" | translate }}</p>
-  </div>
+      <h3 class="references-quote-mark">”</h3>
+      <h4 class="references-name">R. Jäger</h4>
+      <p class="references-job-title">
+        {{ "references.jobTitle2" | translate }}
+      </p>
+      <p class="references-text">{{ "references.text2" | translate }}</p>
+    </div>
     <div class="references-item">
-    <h3 class="references-quote-mark">”</h3>
-    <h4 class="references-name">C. Schröder</h4>
-    <p class="references-job-title">{{ "references.jobTitle3" | translate }}</p>
-    <p class="references-text">{{ "references.text3" | translate }}</p>
+      <h3 class="references-quote-mark">”</h3>
+      <h4 class="references-name">C. Schröder</h4>
+      <p class="references-job-title">
+        {{ "references.jobTitle3" | translate }}
+      </p>
+      <p class="references-text">{{ "references.text3" | translate }}</p>
+    </div>
   </div>
-</div>
 
-<a
-  [routerLink]="['/']"
-  fragment="contact"
-  class="arrow-wrapper arrow-southwest"
-  [ngClass]="{ 'animated': isArrowAnimated, final: hasAnimationFinished }"
-  (mouseenter)="animateArrowOnce()"
->
-  <div class="arrow-frame"></div>
-</a>
-
+  <a
+    [routerLink]="['/']"
+    fragment="contact"
+    class="arrow-wrapper arrow-southwest"
+    [ngClass]="{ animated: isArrowAnimated, final: hasAnimationFinished }"
+    (mouseenter)="animateArrowOnce()"
+  >
+    <div class="arrow-frame"></div>
+  </a>
 </section>
