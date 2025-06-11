@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Overpass";
-  src: url("assets/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+  src: url("/assets/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Syne";
-  src: url("assets/fonts/Syne-VariableFont_wght.ttf") format("truetype");
+  src: url("/assets/fonts/Syne-VariableFont_wght.ttf") format("truetype");
 }
 
 *,
@@ -128,14 +128,14 @@ a:hover {
   height: 11rem;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("assets/img/arrow-southwest-1.png");
+  background-image: url("/assets/img/arrow-southwest-1.png");
   transition: transform 300ms ease;
   transform: translate(0, 0);
 }
 
 
 .arrow-southwest .arrow-frame {
-  background-image: url("assets/img/arrow-southwest-1.png");
+  background-image: url("/assets/img/arrow-southwest-1.png");
   transform: translate(0, 0);
 }
 
@@ -147,7 +147,7 @@ a:hover {
 
 // Lock in final frame after animation
 .arrow-southwest.final .arrow-frame {
-  background-image: url("assets/img/arrow-southwest-3.png");
+  background-image: url("/assets/img/arrow-southwest-3.png");
   transform: translate(-1rem, 1rem);
 }
 
@@ -167,13 +167,13 @@ a:hover {
 
 @keyframes animateArrowSouthwest {
   0% {
-    background-image: url("assets/img/arrow-southwest-1.png");
+    background-image: url("/assets/img/arrow-southwest-1.png");
   }
   50% {
-    background-image: url("assets/img/arrow-southwest-2.png");
+    background-image: url("/assets/img/arrow-southwest-2.png");
   }
   100% {
-    background-image: url("assets/img/arrow-southwest-3.png");
+    background-image: url("/assets/img/arrow-southwest-3.png");
   }
 }
 
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .arrow-southeast .arrow-frame {
-  background-image: url("assets/img/arrow-southeast-1.png");
+  background-image: url("/assets/img/arrow-southeast-1.png");
   transform: translate(0, 0);
 }
 
@@ -198,19 +198,19 @@ a:hover {
 }
 
 .arrow-southeast.final .arrow-frame {
-  background-image: url("assets/img/arrow-southeast-3.png");
+  background-image: url("/assets/img/arrow-southeast-3.png");
   transform: translate(1rem, 1rem); // mirrored movement
 }
 
 @keyframes animateArrowSoutheast {
   0% {
-    background-image: url("assets/img/arrow-southeast-1.png");
+    background-image: url("/assets/img/arrow-southeast-1.png");
   }
   50% {
-    background-image: url("assets/img/arrow-southeast-2.png");
+    background-image: url("/assets/img/arrow-southeast-2.png");
   }
   100% {
-    background-image: url("assets/img/arrow-southeast-3.png");
+    background-image: url("/assets/img/arrow-southeast-3.png");
   }
 }
 

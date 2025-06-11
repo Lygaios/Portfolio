@@ -12,8 +12,8 @@ import { TranslateModule } from "@ngx-translate/core";
 })
 export class PortfolioComponent {
   item1Title = "JOIN";
-  item1ImageUrl = "assets/img/portfolio-join-colour.png";
+  item1ImageUrl = "/assets/img/portfolio-join-colour.png";
 
   item2Title = "El Pollo Loco";
-  item2ImageUrl = "assets/img/el-pollo-loco.png";
+  item2ImageUrl = "/assets/img/el-pollo-loco.png";
 }
