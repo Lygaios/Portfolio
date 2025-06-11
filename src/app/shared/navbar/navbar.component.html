@@ -105,21 +105,31 @@
           <p>joshuabrunke1&#64;gmail.com</p>
         </div>
         <div class="overlay-footer-right">
-          <img
-            src="assets/img/github-button-1.png"
-            class="socmed-icon"
-            alt="GitHub"
-          />
-          <img
-            src="assets/img/email-button-1.png"
-            class="socmed-icon"
-            alt="Email"
-          />
-          <img
-            src="assets/img/linkedin-button-1.png"
-            class="socmed-icon"
-            alt="LinkedIn"
-          />
+          <a
+            href="https://github.com/JoshuaBrunke"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/img/github-button-1.png"
+              class="socmed-icon"
+              alt="GitHub"
+            />
+          </a>
+          <a [routerLink]="['/']" fragment="contact" (click)="toggleMenu()">
+            <img
+              src="assets/img/email-button-1.png"
+              class="socmed-icon"
+              alt="Email"
+            />
+          </a>
+          <a href="#" (click)="$event.preventDefault()">
+            <img
+              src="assets/img/linkedin-button-1.png"
+              class="socmed-icon"
+              alt="LinkedIn"
+            />
+          </a>
         </div>
       </div>
     </div>
