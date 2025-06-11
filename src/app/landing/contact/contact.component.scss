@@ -210,14 +210,27 @@ textarea:-webkit-autofill {
   margin-top: 0.5rem;
 }
 
-/* Style the submit button */
 input[type="submit"] {
-  background-color: var(--color-text);
-  color: var(--color-bg);
-  padding: 12px 20px;
-  border: solid 1px var(--color-bg);
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+  color: var(--color-bg); // cream text
+  background-color: var(--color-text); // black background
+  border: 3px solid var(--color-bg); // cream border
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  transition: padding-left 100ms ease, padding-right 100ms ease,
+    font-weight 100ms ease;
   cursor: pointer;
   float: right;
+
+  &:hover {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: bold;
+  }
 }
 
 .input-wrapper {
