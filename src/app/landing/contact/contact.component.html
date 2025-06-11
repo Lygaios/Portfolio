@@ -17,39 +17,75 @@
         #contactForm="ngForm"
         class="contact-form"
       >
-        <input
-          #name="ngModel"
-          minlength="2"
-          maxlength="40"
-          [(ngModel)]="contactData.name"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="{{ 'contact.namePlaceholder' | translate }}"
-          required
-        />
+<div class="input-wrapper">
+  <input
+    #name="ngModel"
+    minlength="2"
+    maxlength="40"
+    [(ngModel)]="contactData.name"
+    type="text"
+    id="name"
+    name="name"
+    placeholder="{{ 'contact.namePlaceholder' | translate }}"
+    required
+  />
+<span
+  *ngIf="name.touched && !name.disabled"
+  [ngClass]="{
+    'valid-icon': name.valid,
+    'invalid-icon': !name.valid
+  }"
+>
+  {{ name.valid ? '✓' : '!' }}
+</span>
 
-        <input
-          #email="ngModel"
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="{{ 'contact.emailPlaceholder' | translate }}"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        />
+</div>
 
-        <textarea
-          #message="ngModel"
-          minlength="10"
-          maxlength="500"
-          id="message"
-          name="message"
-          [(ngModel)]="contactData.message"
-          placeholder="{{ 'contact.messagePlaceholder' | translate }}"
-          required
-        ></textarea>
+<div class="input-wrapper">
+  <input
+    #email="ngModel"
+    [(ngModel)]="contactData.email"
+    type="email"
+    id="email"
+    name="email"
+    placeholder="{{ 'contact.emailPlaceholder' | translate }}"
+    required
+    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+  />
+<span
+  *ngIf="email.touched && !email.disabled"
+  [ngClass]="{
+    'valid-icon': email.valid,
+    'invalid-icon': !email.valid
+  }"
+>
+  {{ email.valid ? '✓' : '!' }}
+</span>
+
+</div>
+
+<div class="input-wrapper textarea-wrapper">
+  <textarea
+    #message="ngModel"
+    minlength="10"
+    maxlength="500"
+    id="message"
+    name="message"
+    [(ngModel)]="contactData.message"
+    placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+    required
+  ></textarea>
+<span
+  *ngIf="message.touched && !message.disabled"
+  [ngClass]="{
+    'valid-icon': message.valid,
+    'invalid-icon': !message.valid
+  }"
+>
+  {{ message.valid ? '✓' : '!' }}
+</span>
+
+</div>
         <div class="privacy-policy-box">
           <input
             type="checkbox"
