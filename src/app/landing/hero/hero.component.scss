@@ -27,10 +27,11 @@
 }
 
 .hero-title {
-  font-size: 9rem;
+  font-size: 7.5rem;
   text-align: center;
   flex-wrap: wrap;
   font-weight: 750;
+  box-sizing: border-box;
 }
 
 .hero-subtitle-box {
@@ -130,7 +131,7 @@
 
 @media (max-width: 1000px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
   }
 
   .hero-subtitle-box {
@@ -143,6 +144,10 @@
 }
 
 @media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
   .hero-bottom {
     gap: 0.5rem;
     justify-content: space-between;
