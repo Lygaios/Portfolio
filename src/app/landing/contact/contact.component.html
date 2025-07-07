@@ -131,7 +131,11 @@
             {{ "contact.successMessage" | translate }}
           </p>
         </ng-container>
-        <input type="submit" value="{{ 'contact.submit' | translate }}" />
+        <input 
+          type="submit" 
+          value="{{ 'contact.submit' | translate }}" 
+          [disabled]="!contactForm.valid || !contactData.privacyPolicy"
+        />
       </form>
     </div>
   </div>
