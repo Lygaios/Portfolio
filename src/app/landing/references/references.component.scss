@@ -114,3 +114,9 @@
     max-width: 28rem;
   }
 }
+
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
