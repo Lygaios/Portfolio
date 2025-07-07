@@ -1,7 +1,7 @@
 {
   "overlay": {
     "about": "Über mich",
-    "skills": "Meine Kenntnisse",
+    "skills": "Kenntnisse",
     "portfolio": "Portfolio",
     "findme": "Kontakt"
   },
@@ -21,7 +21,7 @@
     "talk": "Unterhalten wir uns!"
   },
   "skills": {
-    "title": "Meine Kenntnisse",
+    "title": "Kenntnisse",
     "continuedLearning1": "Kontaktieren Sie mich,",
     "continuedLearning2": "wenn Sie weitere Fähigkeiten benötigen. Ich bin stets bereit zu lernen."
   },
