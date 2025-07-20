@@ -1,16 +1,36 @@
 RewriteEngine On
 
-# Handle Angular Router
+# Handle Angular Router - but exclude static files
 RewriteBase /
 RewriteRule ^index\.html$ - [L]
+
+# Don't rewrite files that exist (JS, CSS, images, etc.)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Don't rewrite API calls or PHP files
+RewriteCond %{REQUEST_URI} !^/sendMail\.php$
+RewriteCond %{REQUEST_URI} !^/api/
+
+# Don't rewrite files with extensions (JS, CSS, images, fonts, etc.)
+RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|json|php|html)$
+
+# Only rewrite routes that don't have file extensions
 RewriteRule . /index.html [L]
 
 # Security headers
 Header always set X-Content-Type-Options nosniff
 Header always set X-Frame-Options DENY
 Header always set X-XSS-Protection "1; mode=block"
+
+# Ensure proper MIME types for modern web files
+AddType application/javascript .js
+AddType text/css .css
+AddType application/json .json
+AddType font/woff .woff
+AddType font/woff2 .woff2
+AddType font/ttf .ttf
+AddType image/svg+xml .svg
 
 # Cache control for assets
 <IfModule mod_expires.c>
