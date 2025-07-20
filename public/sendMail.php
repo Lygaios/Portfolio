@@ -1,17 +1,16 @@
 <?php
 
 switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
+    case ("OPTIONS"):
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
-        case("POST"): //Send the email;
+        case("POST"):
             header("Access-Control-Allow-Origin: *");
-            // Payload is not send to $_POST Variable,
-            // is send to php:input as a text
+            header("Content-Type: application/json");
+            
             $json = file_get_contents('php://input');
-            //parse the Payload from text format to Object
             $params = json_decode($json);
     
             $email = $params->email;
@@ -25,13 +24,19 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
-
-            // Additional headers
             $headers[] = "From: noreply@joshuabrunke.com";
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
+            $result = mail($recipient, $subject, $message, implode("\r\n", $headers));
+            
+            if ($result) {
+                http_response_code(200);
+                echo json_encode(['status' => 'success', 'message' => 'Email sent successfully']);
+            } else {
+                http_response_code(500);
+                echo json_encode(['status' => 'error', 'message' => 'Failed to send email']);
+            }
             break;
-        default: //Reject any non POST or OPTIONS requests.
+        default:
             header("Allow: POST", true, 405);
             exit;
     } 

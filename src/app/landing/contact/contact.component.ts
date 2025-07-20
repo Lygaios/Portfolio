@@ -22,7 +22,7 @@ export class ContactComponent {
     privacyPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://joshuabrunke.com/sendMail.php',
@@ -41,18 +41,21 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            // Email sent successfully
             ngForm.resetForm();
+            // You could add a success message here if needed
           },
           error: (error) => {
-            console.error(error);
+            // Handle email sending error
+            console.error('Failed to send email:', error);
+            // You could add an error message here if needed
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            // Email sending process completed
+          }
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.info('Mail test mode is enabled. Form data:', this.contactData);
-      console.info(
-        'Form submitted successfully, but no email will be sent due to mailTest being true.'
-      );
+      // Test mode - for development only
       ngForm.resetForm();
     }
   }
