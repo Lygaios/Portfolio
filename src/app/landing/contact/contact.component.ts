@@ -25,37 +25,58 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://joshuabrunke.com/sendMail.php',
+    endPoint: 'http://joshuabrunke.com/sendMail.php', // Using HTTP temporarily due to SSL cert issues
+    fallbackEndPoint: 'https://joshuabrunke.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': "'text/plain",
+        'Content-Type': 'text/plain',
         responseType: 'text',
       },
     },
   };
 
+  isSubmitting = false;
+  submitStatus: 'idle' | 'success' | 'error' = 'idle';
+  errorMessage = '';
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && !this.isSubmitting) {
+      this.isSubmitting = true;
+      this.submitStatus = 'idle';
+      this.errorMessage = '';
+
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // Email sent successfully
+            this.submitStatus = 'success';
+            this.isSubmitting = false;
             ngForm.resetForm();
-            // You could add a success message here if needed
+            this.contactData = {
+              name: '',
+              email: '',
+              message: '',
+              privacyPolicy: false,
+            };
           },
           error: (error) => {
-            // Handle email sending error
             console.error('Failed to send email:', error);
-            // You could add an error message here if needed
+            this.submitStatus = 'error';
+            this.isSubmitting = false;
+            
+            // Check if it's an SSL certificate error
+            if (error.status === 0 && error.statusText === 'Unknown Error') {
+              this.errorMessage = 'Connection error. Please try again or contact me directly at joshuabrunke1@gmail.com';
+            } else {
+              this.errorMessage = 'Failed to send message. Please try again later.';
+            }
           },
           complete: () => {
-            // Email sending process completed
+            this.isSubmitting = false;
           }
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      // Test mode - for development only
       ngForm.resetForm();
     }
   }

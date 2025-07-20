@@ -131,10 +131,23 @@
             {{ "contact.successMessage" | translate }}
           </p>
         </ng-container>
+
+        <!-- Success message for actual email sending -->
+        <ng-container *ngIf="submitStatus === 'success'">
+          <p class="success-message">
+            {{ "contact.successMessage" | translate }}
+          </p>
+        </ng-container>
+
+        <!-- Error message for email sending failures -->
+        <ng-container *ngIf="submitStatus === 'error'">
+          <p class="error-message">{{ errorMessage }}</p>
+        </ng-container>
+
         <input 
           type="submit" 
-          value="{{ 'contact.submit' | translate }}" 
-          [disabled]="!contactForm.valid || !contactData.privacyPolicy"
+          value="{{ isSubmitting ? 'Sending...' : ('contact.submit' | translate) }}" 
+          [disabled]="!contactForm.valid || !contactData.privacyPolicy || isSubmitting"
         />
       </form>
     </div>
