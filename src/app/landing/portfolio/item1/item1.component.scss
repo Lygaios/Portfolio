@@ -176,7 +176,6 @@ h3 {
   transform: translateX(-2rem);
   transition: opacity 100ms ease, transform 100ms ease;
 
-  // even items slide from left
   .portfolio-item.even & {
     transform: translateX(2rem);
   }

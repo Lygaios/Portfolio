@@ -85,12 +85,9 @@ export class NavbarComponent implements OnInit {
    */
   navigateToContact(): void {
     if (this.isOnHomePage()) {
-      // If already on home page, just scroll to contact
       this.scrollToElement('contact');
     } else {
-      // Navigate to home page first, then scroll to contact after navigation
       this.router.navigate(['/']).then(() => {
-        // Use setTimeout to ensure DOM is ready after navigation
         setTimeout(() => {
           this.scrollToElement('contact');
         }, 100);

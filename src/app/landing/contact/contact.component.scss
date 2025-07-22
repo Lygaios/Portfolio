@@ -151,7 +151,7 @@ textarea:-webkit-autofill {
       top: -0.15rem;
       width: 2rem;
       height: 2rem;
-      background-color: var(--color-highlight); // purple
+      background-color: var(--color-highlight);
       border-radius: 50%;
       z-index: 1;
       opacity: 0;
@@ -268,12 +268,12 @@ input[type="submit"] {
 }
 
 .valid-icon {
-  background-color: #00cc66; // green
+  background-color: #00cc66;
   color: black;
 }
 
 .invalid-icon {
-  background-color: #ff5555; // red
+  background-color: #ff5555;
   color: black;
 }
 

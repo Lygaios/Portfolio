@@ -64,7 +64,6 @@ export class ContactComponent {
             this.submitStatus = 'error';
             this.isSubmitting = false;
             
-            // Check if it's an SSL certificate error
             if (error.status === 0 && error.statusText === 'Unknown Error') {
               this.errorMessage = 'Connection error. Please try again or contact me directly at joshuabrunke1@gmail.com';
             } else {
