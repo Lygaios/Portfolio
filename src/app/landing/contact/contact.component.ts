@@ -41,41 +41,57 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && !this.isSubmitting) {
-      this.isSubmitting = true;
-      this.submitStatus = 'idle';
-      this.errorMessage = '';
-
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            this.submitStatus = 'success';
-            this.isSubmitting = false;
-            ngForm.resetForm();
-            this.contactData = {
-              name: '',
-              email: '',
-              message: '',
-              privacyPolicy: false,
-            };
-          },
-          error: (error) => {
-            console.error('Failed to send email:', error);
-            this.submitStatus = 'error';
-            this.isSubmitting = false;
-            
-            if (error.status === 0 && error.statusText === 'Unknown Error') {
-              this.errorMessage = 'Connection error. Please try again or contact me directly at joshuabrunke1@gmail.com';
-            } else {
-              this.errorMessage = 'Failed to send message. Please try again later.';
-            }
-          },
-          complete: () => {
-            this.isSubmitting = false;
-          }
-        });
+      this.handleEmailSubmission(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+    }
+  }
+
+  /**
+   * Handles the email submission process
+   * @param ngForm - The form reference for resetting after successful submission
+   */
+  private handleEmailSubmission(ngForm: NgForm): void {
+    this.isSubmitting = true;
+    this.submitStatus = 'idle';
+    this.errorMessage = '';
+
+    this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+      next: (response) => this.handleSubmissionSuccess(ngForm),
+      error: (error) => this.handleSubmissionError(error),
+      complete: () => this.isSubmitting = false
+    });
+  }
+
+  /**
+   * Handles successful form submission
+   * @param ngForm - The form reference for resetting
+   */
+  private handleSubmissionSuccess(ngForm: NgForm): void {
+    this.submitStatus = 'success';
+    this.isSubmitting = false;
+    ngForm.resetForm();
+    this.contactData = {
+      name: '',
+      email: '',
+      message: '',
+      privacyPolicy: false,
+    };
+  }
+
+  /**
+   * Handles form submission errors
+   * @param error - The error object from the HTTP request
+   */
+  private handleSubmissionError(error: any): void {
+    console.error('Failed to send email:', error);
+    this.submitStatus = 'error';
+    this.isSubmitting = false;
+    
+    if (error.status === 0 && error.statusText === 'Unknown Error') {
+      this.errorMessage = 'Connection error. Please try again or contact me directly at joshuabrunke1@gmail.com';
+    } else {
+      this.errorMessage = 'Failed to send message. Please try again later.';
     }
   }
 

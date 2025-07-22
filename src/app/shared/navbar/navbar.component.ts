@@ -39,18 +39,31 @@ export class NavbarComponent implements OnInit {
 
   toggleMenu(): void {
     this.wasOpen = this.isMenuOpen;
+    this.showSlope1 = true;
 
     if (!this.isMenuOpen) {
-      this.showSlope1 = true;
-      this.isMenuOpen = true;
-      setTimeout(() => (this.showSlope1 = false), 300);
+      this.openMenu();
     } else {
-      this.showSlope1 = true;
-      setTimeout(() => {
-        this.isMenuOpen = false;
-        this.showSlope1 = false;
-      }, 300);
+      this.closeMenu();
     }
+  }
+
+  /**
+   * Opens the menu with animation
+   */
+  private openMenu(): void {
+    this.isMenuOpen = true;
+    setTimeout(() => (this.showSlope1 = false), 300);
+  }
+
+  /**
+   * Closes the menu with animation
+   */
+  private closeMenu(): void {
+    setTimeout(() => {
+      this.isMenuOpen = false;
+      this.showSlope1 = false;
+    }, 300);
   }
 
   /**
