@@ -35,11 +35,11 @@
 }
 
 .animate-open {
-  animation: burgerOpen 120ms steps(4) forwards;
+  animation: burgerOpen 200ms steps(4) forwards;
 }
 
 .animate-close {
-  animation: burgerClose 120ms steps(4);
+  animation: burgerClose 200ms steps(4);
 }
 
 @keyframes burgerOpen {
@@ -122,7 +122,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(-100%);
-  animation: slideIn 100ms ease-out forwards;
+  animation: slideIn 400ms ease-out forwards;
 }
 
 @keyframes slideIn {
