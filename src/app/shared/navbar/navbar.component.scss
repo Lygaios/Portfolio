@@ -1,14 +1,17 @@
 .navbar {
-  position: sticky;
+  position: fixed;  /* Using fixed instead of sticky for better browser support */
   top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 3;
-  background-color: var(--color-bg);
   height: 80px;
   box-sizing: border-box;
+  width: 100%;
+  background-color: var(--color-bg);
+  z-index: 1000;
 }
 
 .logo-link {

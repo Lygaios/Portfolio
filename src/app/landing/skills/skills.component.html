@@ -93,11 +93,11 @@
     </div>
   </div>
   <a
-    [routerLink]="['/']"
-    fragment="portfolio"
+    href="#portfolio"
     class="arrow-wrapper arrow-southeast"
     [ngClass]="{ animated: isArrowAnimated, final: hasAnimationFinished }"
     (mouseenter)="animateArrowOnce()"
+    (click)="scrollToElement('portfolio'); $event.preventDefault()"
   >
     <div class="arrow-frame"></div>
   </a>

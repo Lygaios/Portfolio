@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   isMenuOpen = false;
   wasOpen = false;
   showSlope1 = false;
@@ -18,6 +18,19 @@ export class NavbarComponent {
   private router = inject(Router);
 
   constructor(public translate: TranslateService) {}
+
+  ngOnInit(): void {
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const fragment = target.getAttribute('href')?.substring(1);
+        if (fragment) {
+          this.scrollToElement(fragment);
+        }
+      }
+    });
+  }
 
   switchLangManual(lang: string): void {
     this.translate.use(lang);
@@ -40,8 +53,30 @@ export class NavbarComponent {
     }
   }
 
+  /**
+   * Smoothly scrolls to the top of the page
+   */
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /**
+   * Scrolls to a specific element with proper offset to account for the fixed navbar
+   * @param elementId - The ID of the target element to scroll to
+   */
+  scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const navbarHeight = 80;
+      const extraPadding = 40;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight - extraPadding;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 
   isOnHomePage(): boolean {

@@ -52,30 +52,27 @@
       <div class="overlay-link-box">
         <ng-container *ngIf="isOnHomePage(); else homepageLink">
           <a
-            [routerLink]="['/']"
-            fragment="about"
+            href="#about"
             class="overlay-link"
-            (click)="toggleMenu()"
+            (click)="scrollToElement('about'); toggleMenu(); $event.preventDefault()"
           >
             {{ "overlay.about" | translate }}
             <span class="underline"></span>
             <span class="click-box"></span>
           </a>
           <a
-            [routerLink]="['/']"
-            fragment="skills"
+            href="#skills"
             class="overlay-link"
-            (click)="toggleMenu()"
+            (click)="scrollToElement('skills'); toggleMenu(); $event.preventDefault()"
           >
             {{ "overlay.skills" | translate }}
             <span class="underline"></span>
             <span class="click-box"></span>
           </a>
           <a
-            [routerLink]="['/']"
-            fragment="portfolio"
+            href="#portfolio"
             class="overlay-link"
-            (click)="toggleMenu()"
+            (click)="scrollToElement('portfolio'); toggleMenu(); $event.preventDefault()"
           >
             {{ "overlay.portfolio" | translate }}
             <span class="underline"></span>
@@ -116,7 +113,7 @@
               alt="GitHub"
             />
           </a>
-          <a [routerLink]="['/']" fragment="contact" (click)="toggleMenu()">
+          <a href="#contact" (click)="scrollToElement('contact'); toggleMenu(); $event.preventDefault()">
             <img
               src="/assets/img/email-button-1.png"
               class="socmed-icon"

@@ -35,11 +35,11 @@
   </div>
 
   <a
-    [routerLink]="['/']"
-    fragment="contact"
+    href="#contact"
     class="arrow-wrapper arrow-southwest"
     [ngClass]="{ animated: isArrowAnimated, final: hasAnimationFinished }"
     (mouseenter)="animateArrowOnce()"
+    (click)="scrollToElement('contact'); $event.preventDefault()"
   >
     <div class="arrow-frame"></div>
   </a>

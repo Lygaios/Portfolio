@@ -31,14 +31,14 @@
     </div>
   </div>
   <a
-    [routerLink]="['/']"
-    fragment="skills"
+    href="#skills"
     class="arrow-wrapper arrow-southwest"
     [ngClass]="{
       animated: isArrowAnimated,
       final: hasAnimationFinished
     }"
     (mouseenter)="animateArrowOnce()"
+    (click)="scrollToElement('skills'); $event.preventDefault()"
   >
     <div class="arrow-frame"></div>
   </a>
