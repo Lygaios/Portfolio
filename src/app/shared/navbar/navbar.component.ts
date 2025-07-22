@@ -53,7 +53,7 @@ export class NavbarComponent implements OnInit {
    */
   private openMenu(): void {
     this.isMenuOpen = true;
-    setTimeout(() => (this.showSlope1 = false), 500);
+    setTimeout(() => (this.showSlope1 = false), 200);
   }
 
   /**
@@ -63,7 +63,7 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       this.isMenuOpen = false;
       this.showSlope1 = false;
-    }, 500);
+    }, 200);
   }
 
   /**
