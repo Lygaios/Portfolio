@@ -32,6 +32,8 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+  z-index: 4;
+  position: relative;
 }
 
 .animate-open {
@@ -122,7 +124,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(-100%);
-  animation: slideIn 400ms ease-out forwards;
+  animation: slideIn 300ms ease-out forwards;
 }
 
 @keyframes slideIn {
