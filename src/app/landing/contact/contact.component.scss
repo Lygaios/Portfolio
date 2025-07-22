@@ -302,7 +302,6 @@ input[type="submit"] {
   align-items: flex-end;
   width: 100%;
   padding-right: 1.5rem;
-  cursor: pointer;
 
   &:hover .contact-bottom-arrow {
     animation: animateArrowUp 250ms steps(1) forwards;
@@ -317,6 +316,7 @@ input[type="submit"] {
   background-size: contain;
   transition: transform 100ms ease;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 @keyframes animateArrowUp {

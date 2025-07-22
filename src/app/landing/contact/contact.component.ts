@@ -82,6 +82,10 @@ export class ContactComponent {
 
   constructor(private router: Router) {}
 
+  /**
+   * Opens the privacy policy page in a new tab
+   * @param event - The mouse event to prevent default behavior
+   */
   openPrivacyInNewTab(event: MouseEvent) {
     event.preventDefault();
 
@@ -89,5 +93,12 @@ export class ContactComponent {
     const url = this.router.serializeUrl(urlTree);
 
     window.open(url, '_blank');
+  }
+
+  /**
+   * Smoothly scrolls to the top of the page
+   */
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
