@@ -69,27 +69,27 @@ textarea {
   width: 100%;
   max-width: 30rem;
   padding: 12px;
-  border: none;
+  border: 3px solid transparent;
   border-bottom: 1px solid var(--color-bg);
   background-color: var(--color-text);
   color: var(--color-bg);
   box-sizing: border-box;
   resize: vertical;
-  transition: border 0.2s ease, border-bottom-width 0.2s ease;
+  transition: border-color 0.2s ease;
   font-family: var(--font-body);
 
   &::placeholder {
     color: var(--color-bg);
-    opacity: 1; // ensure full visibility
+    opacity: 1;
   }
 
   &:hover {
-    border: 3px solid var(--color-bg);
+    border-color: var(--color-bg);
   }
 
   &:focus {
     outline: none;
-    border: 1px solid var(--color-bg);
+    border-color: var(--color-bg);
   }
 }
 
@@ -206,9 +206,9 @@ input[type="submit"] {
   display: block;
   font-size: 1.2rem;
   font-family: var(--font-body);
-  color: var(--color-bg); // cream text
-  background-color: var(--color-text); // black background
-  border: 3px solid var(--color-bg); // cream border
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  border: 3px solid var(--color-bg);
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   font-weight: normal;
